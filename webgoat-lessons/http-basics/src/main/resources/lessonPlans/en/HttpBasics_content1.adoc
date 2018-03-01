@@ -1,8 +1,24 @@
 
-Enter your name in the input field below and press "Go!" to submit.	The server will accept the request, reverse the
-input and display it back to the user, illustrating the basics of handling an HTTP request.
+== HTTP GET
 
-== Try It!
+Enter a string, such as your name
+the input field below and
+press "Encode" to submit.
+The server will accept the request, and
+send back some representations of the string
+to illustrate some ways to encode the string.
+This ia a basic HTTP GET request and response.
 
-Enter your name in the input field below and press "Go!" to submit. The server will accept the request, reverse the input
-and display it back to the user, illustrating the basics of handling an HTTP request.
+The page displays UTF-8 encoding.
+Use this page to
+1.  type in some regular keyboard characters,
+notice each character takes one hex byte in UTF-8.
+For regular characters, "ab12" example.
+2. How are spaces represented" For example "ab 12".
+3. The most common characters, only one byte is needed.
+But for less common characters, like &copy;
+4. Capture the request in proxy and find your input string.
+Compare to the input string. Note spaces. Go to the next page
+to see more about this format.
+
+
