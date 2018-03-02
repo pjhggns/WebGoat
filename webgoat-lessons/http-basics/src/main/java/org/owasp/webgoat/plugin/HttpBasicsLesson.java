@@ -52,7 +52,7 @@ import java.net.URLEncoder;
 public class HttpBasicsLesson extends AssignmentEndpoint {
 
     public static final char ENCSP = '.'; // display spaces/separators in encoded strings
-    @RequestMapping(method = RequestMethod.PUT)
+    @RequestMapping(method = RequestMethod.GET)
     public
     @ResponseBody
     AttackResult completed(@RequestParam String raw_string) throws IOException {
@@ -177,7 +177,6 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
                 */
                 ;
 
-
             return trackProgress(success()
                     .feedback("http-basics.reversed")
                     .feedbackArgs(feedbackArgs)
@@ -186,17 +185,50 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
                 .build());
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.PUT)
     public
     @ResponseBody
     AttackResult completed_put(@RequestParam String person) throws IOException {
-        if (!person.toString().equals("")) {
-            return trackProgress(success()
-                    .feedback("http-basics.reversed")
-                    .feedbackArgs(new StringBuffer(person).reverse().toString())
-                    .build());
-        } else {
+        if (person.toString().equals("")) {
             return trackProgress(failed().feedback("http-basics.empty").build());
         }
+
+        String raw_input_string = "raw input";
+        String new_formatted_input_string = "new_formatted_inout_string";
+        String url_form_encoded_input = "url_form_encoded_input";
+        String htmlEscInputString = "htmlEscInputString";
+        String url_form_formatted_input_string = "url_form_formatted_input_string";
+
+        String feedbackArgs = "<br><div><br>" // HtmlUtils.htmlEscape(raw_input_string)
+                + "<br>" + "<table border=1 style=font-family:monospace>"
+                + "<tr>"
+                + "<th>" + "Your input" // + "</th>"
+                + "<td>" + HtmlUtils.htmlEscape(raw_input_string) // + "</td>"
+                // + "</tr>"
+                + "<tr>"
+                + "<th>" + "your input (spaces added for alignment)" // + "</th>"
+                + "<td>" + new_formatted_input_string// + "</td>"
+                + "<tr>"
+                    + "<th>" + "url-form-encoded" // + "</th>"
+                    + "<td>" + url_form_encoded_input // + "</td>"
+                    // + "</tr>"
+                    + "<tr>"
+                    + "<th>" + "url-form formatted" // + "</th>"
+                    + "<td>" + url_form_formatted_input_string // + "</td>"
+                    // + "</tr>"
+                    + "<tr>"
+                    + "<th>" + "html escaped" // + "</th>"
+                    + "<td>" + HtmlUtils.htmlEscape(htmlEscInputString) // + "</td>"
+                // + "</table>"
+                ;
+
+        String hex_encoded_input_string = "hex_encoded_input_string";
+        return trackProgress(success()
+                .feedback("http-basics.reversed")
+                .feedbackArgs(feedbackArgs)
+                .output("http-basics.lesson.success.output")
+                .outputArgs("", hex_encoded_input_string, url_form_encoded_input)
+                .build());
+
     }
 }

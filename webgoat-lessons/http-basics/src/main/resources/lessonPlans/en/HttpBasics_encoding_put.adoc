@@ -1,0 +1,24 @@
+
+== HTTP PUT
+Look in the proxy to examine the http request.
+You will see the  string you entered, as a query parameter
+to the PUT request.
+But there may be some differences, for example spaces are replaced
+by plus symbols. This is called url-form-encoded format.
+Sometimes this is imprecisely called "url encoded".
+The underlying encoding is to replace characters
+with the hex representation preceded by a percent sign %
+so it is also called per-cent-encoding.
+
+In addition to spaces, url encoding also replaces
+some other characters, for example, some special sequences
+are:
+- 1
+- 2
+
+Look at the HTTTPmrequest and note the format of a PUT
+request. Note the headers for content-type and for
+content-lenght. There is no content-length header in a get,
+because there is no body content.
+
+

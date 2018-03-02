@@ -1,0 +1,1300 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.owasp.webgoat:webwolf:jar:8.0.0.M3
+[WARNING] 'dependencies.dependency.version' for commons-io:commons-io:jar is either LATEST or RELEASE (both of them are being deprecated) @ org.owasp.webgoat:webwolf:[unknown-version], C:\src\WebGoat\WebGoat\webwolf\pom.xml, line 29, column 22
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] WebGoat Parent Pom
+[INFO] webgoat-container
+[INFO] webgoat-plugins-parent
+[INFO] bypass-restrictions
+[INFO] challenge
+[INFO] client-side-filtering
+[INFO] cross-site-scripting
+[INFO] html-tampering
+[INFO] http-basics
+[INFO] http-proxies
+[INFO] insecure-login
+[INFO] jwt
+[INFO] sql-injection
+[INFO] xxe
+[INFO] idor
+[INFO] vulnerable-components
+[INFO] webgoat-introduction
+[INFO] webwolf-introduction
+[INFO] auth-bypass
+[INFO] missing-function-ac
+[INFO] csrf
+[INFO] webgoat-server
+[INFO] webwolf
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building WebGoat Parent Pom 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ webgoat-parent ---
+[INFO] Installing C:\src\WebGoat\WebGoat\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\webgoat-parent\8.0.0.M3\webgoat-parent-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building webgoat-container 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ webgoat-container ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 67 resources
+[INFO] Copying 1 resource
+[INFO] Copying 181 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ webgoat-container ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 67 source files to C:\src\WebGoat\WebGoat\webgoat-container\target\classes
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-container/src/main/java/org/owasp/webgoat/service/LessonProgressService.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-container/src/main/java/org/owasp/webgoat/service/LessonProgressService.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ webgoat-container ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ webgoat-container ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to C:\src\WebGoat\WebGoat\webgoat-container\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ webgoat-container ---
+[WARNING] The parameter forkMode is deprecated since version 2.14. Use forkCount and reuseForks instead.
+[WARNING] useSystemClassloader setting has no effect when not forking
+Running org.owasp.webgoat.service.HintServiceTest
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /service/hint.mvc
+       Parameters = {}
+          Headers = {}
+
+Handler:
+             Type = org.owasp.webgoat.service.HintService
+           Method = public java.util.List<org.owasp.webgoat.lessons.Hint> org.owasp.webgoat.service.HintService.showHint()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"hint":"hint 1","lesson":null,"assignmentPath":"/HttpBasics/attack1","number":0},{"hint":"hint 2","lesson":null,"assignmentPath":"/HttpBasics/attack1","number":0}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.874 sec - in org.owasp.webgoat.service.HintServiceTest
+Running org.owasp.webgoat.service.LabelServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.978 sec - in org.owasp.webgoat.service.LabelServiceTest
+Running org.owasp.webgoat.service.LessonMenuServiceTest
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /service/lessonmenu.mvc
+       Parameters = {}
+          Headers = {}
+
+Handler:
+             Type = org.owasp.webgoat.service.LessonMenuService
+           Method = public java.util.List<org.owasp.webgoat.lessons.LessonMenuItem> org.owasp.webgoat.service.LessonMenuService.showLeftNav()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"name":"Access Control Flaws","type":"CATEGORY","children":[{"name":"ZA","type":"LESSON","children":[],"complete":true,"link":null}],"complete":false,"link":null}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.148 sec - in org.owasp.webgoat.service.LessonMenuServiceTest
+Running org.owasp.webgoat.service.LessonProgressServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec - in org.owasp.webgoat.service.LessonProgressServiceTest
+Running org.owasp.webgoat.service.ReportCardServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec - in org.owasp.webgoat.service.ReportCardServiceTest
+Running org.owasp.webgoat.session.LabelDebuggerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.owasp.webgoat.session.LabelDebuggerTest
+Running org.owasp.webgoat.session.LessonTrackerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 sec - in org.owasp.webgoat.session.LessonTrackerTest
+Running org.owasp.webgoat.users.UserRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+Hibernate: select webgoatuse0_.username as username1_6_0_, webgoatuse0_.password as password2_6_0_, webgoatuse0_.role as role3_6_0_ from web_goat_user webgoatuse0_ where webgoatuse0_.username=?
+Hibernate: insert into web_goat_user (password, role, username) values (?, ?, ?)
+Hibernate: select webgoatuse0_.username as username1_6_, webgoatuse0_.password as password2_6_, webgoatuse0_.role as role3_6_ from web_goat_user webgoatuse0_ where webgoatuse0_.username=?
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.085 sec - in org.owasp.webgoat.users.UserRepositoryTest
+Running org.owasp.webgoat.users.UserServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec - in org.owasp.webgoat.users.UserServiceTest
+Running org.owasp.webgoat.users.UserTrackerRepositoryTest
+Hibernate: select usertracke0_.user as user1_4_1_, lessontrac1_.user_tracker_user as user_tra1_5_3_, lessontrac2_.lesson_name as lesson_t2_5_3_, lessontrac2_.lesson_name as lesson_n1_1_0_, lessontrac2_.number_of_attempts as number_o2_1_0_ from user_tracker usertracke0_ left outer join user_tracker_lesson_trackers lessontrac1_ on usertracke0_.user=lessontrac1_.user_tracker_user left outer join lesson_tracker lessontrac2_ on lessontrac1_.lesson_trackers_lesson_name=lessontrac2_.lesson_name where usertracke0_.user=?
+Hibernate: select lessontrac0_.lesson_name as lesson_n1_1_1_, lessontrac0_.number_of_attempts as number_o2_1_1_, allassignm1_.lesson_tracker_lesson_name as lesson_t1_2_3_, assignment2_.name as all_assi2_2_3_, assignment2_.name as name1_0_0_, assignment2_.path as path2_0_0_ from lesson_tracker lessontrac0_ left outer join lesson_tracker_all_assignments allassignm1_ on lessontrac0_.lesson_name=allassignm1_.lesson_tracker_lesson_name left outer join assignment assignment2_ on allassignm1_.all_assignments_name=assignment2_.name where lessontrac0_.lesson_name=?
+Hibernate: select assignment0_.name as name1_0_0_, assignment0_.path as path2_0_0_ from assignment assignment0_ where assignment0_.name=?
+Hibernate: insert into user_tracker (user) values (?)
+Hibernate: insert into lesson_tracker (number_of_attempts, lesson_name) values (?, ?)
+Hibernate: insert into assignment (path, name) values (?, ?)
+Hibernate: insert into user_tracker_lesson_trackers (user_tracker_user, lesson_trackers_lesson_name) values (?, ?)
+Hibernate: insert into lesson_tracker_all_assignments (lesson_tracker_lesson_name, all_assignments_name) values (?, ?)
+Hibernate: update lesson_tracker set number_of_attempts=? where lesson_name=?
+Hibernate: select usertracke0_.user as user1_4_1_, lessontrac1_.user_tracker_user as user_tra1_5_3_, lessontrac2_.lesson_name as lesson_t2_5_3_, lessontrac2_.lesson_name as lesson_n1_1_0_, lessontrac2_.number_of_attempts as number_o2_1_0_ from user_tracker usertracke0_ left outer join user_tracker_lesson_trackers lessontrac1_ on usertracke0_.user=lessontrac1_.user_tracker_user left outer join lesson_tracker lessontrac2_ on lessontrac1_.lesson_trackers_lesson_name=lessontrac2_.lesson_name where usertracke0_.user=?
+Hibernate: select lessontrac0_.lesson_name as lesson_n1_1_1_, lessontrac0_.number_of_attempts as number_o2_1_1_, allassignm1_.lesson_tracker_lesson_name as lesson_t1_2_3_, assignment2_.name as all_assi2_2_3_, assignment2_.name as name1_0_0_, assignment2_.path as path2_0_0_ from lesson_tracker lessontrac0_ left outer join lesson_tracker_all_assignments allassignm1_ on lessontrac0_.lesson_name=allassignm1_.lesson_tracker_lesson_name left outer join assignment assignment2_ on allassignm1_.all_assignments_name=assignment2_.name where lessontrac0_.lesson_name=?
+Hibernate: select assignment0_.name as name1_0_0_, assignment0_.path as path2_0_0_ from assignment assignment0_ where assignment0_.name=?
+Hibernate: insert into user_tracker (user) values (?)
+Hibernate: insert into lesson_tracker (number_of_attempts, lesson_name) values (?, ?)
+Hibernate: insert into assignment (path, name) values (?, ?)
+Hibernate: insert into user_tracker_lesson_trackers (user_tracker_user, lesson_trackers_lesson_name) values (?, ?)
+Hibernate: insert into lesson_tracker_all_assignments (lesson_tracker_lesson_name, all_assignments_name) values (?, ?)
+Hibernate: insert into lesson_tracker_solved_assignments (lesson_tracker_lesson_name, solved_assignments_name) values (?, ?)
+Hibernate: select usertracke0_.user as user1_4_1_, lessontrac1_.user_tracker_user as user_tra1_5_3_, lessontrac2_.lesson_name as lesson_t2_5_3_, lessontrac2_.lesson_name as lesson_n1_1_0_, lessontrac2_.number_of_attempts as number_o2_1_0_ from user_tracker usertracke0_ left outer join user_tracker_lesson_trackers lessontrac1_ on usertracke0_.user=lessontrac1_.user_tracker_user left outer join lesson_tracker lessontrac2_ on lessontrac1_.lesson_trackers_lesson_name=lessontrac2_.lesson_name where usertracke0_.user=?
+Hibernate: select lessontrac0_.lesson_name as lesson_n1_1_1_, lessontrac0_.number_of_attempts as number_o2_1_1_, allassignm1_.lesson_tracker_lesson_name as lesson_t1_2_3_, assignment2_.name as all_assi2_2_3_, assignment2_.name as name1_0_0_, assignment2_.path as path2_0_0_ from lesson_tracker lessontrac0_ left outer join lesson_tracker_all_assignments allassignm1_ on lessontrac0_.lesson_name=allassignm1_.lesson_tracker_lesson_name left outer join assignment assignment2_ on allassignm1_.all_assignments_name=assignment2_.name where lessontrac0_.lesson_name=?
+Hibernate: select assignment0_.name as name1_0_0_, assignment0_.path as path2_0_0_ from assignment assignment0_ where assignment0_.name=?
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.192 sec - in org.owasp.webgoat.users.UserTrackerRepositoryTest
+Running org.owasp.webgoat.users.UserValidatorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in org.owasp.webgoat.users.UserValidatorTest
+
+Results :
+
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ webgoat-container ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-container\target\webgoat-container-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:test-jar (default) @ webgoat-container ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-container\target\webgoat-container-8.0.0.M3-tests.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ webgoat-container ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-container\target\webgoat-container-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\webgoat-container\8.0.0.M3\webgoat-container-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-container\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\webgoat-container\8.0.0.M3\webgoat-container-8.0.0.M3.pom
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-container\target\webgoat-container-8.0.0.M3-tests.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\webgoat-container\8.0.0.M3\webgoat-container-8.0.0.M3-tests.jar
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building webgoat-plugins-parent 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ webgoat-lessons-parent ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:webgoat-lessons-parent:8.0.0.M3:pom
+[INFO] org.owasp.webgoat.lesson:webgoat-lessons-parent:8.0.0.M3:pom already exists in C:\src\WebGoat\webgoat-container\src\main\resources\plugin_lessons
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ webgoat-lessons-parent ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\webgoat-lessons-parent\8.0.0.M3\webgoat-lessons-parent-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building bypass-restrictions 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ bypass-restrictions ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ bypass-restrictions ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\bypass-restrictions\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ bypass-restrictions ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\bypass-restrictions\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ bypass-restrictions ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\src\WebGoat\WebGoat\webgoat-lessons\bypass-restrictions\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ bypass-restrictions ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.owasp.webgoat.plugin.BypassRestrictionsFrontendValidationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+io/console not supported; tty will not be manipulated
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.467 sec - in org.owasp.webgoat.plugin.BypassRestrictionsFrontendValidationTest
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ bypass-restrictions ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\bypass-restrictions\target\bypass-restrictions-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ bypass-restrictions ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:bypass-restrictions:8.0.0.M3:jar
+[INFO] Copying bypass-restrictions-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\bypass-restrictions-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ bypass-restrictions ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\bypass-restrictions\target\bypass-restrictions-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\bypass-restrictions\8.0.0.M3\bypass-restrictions-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\bypass-restrictions\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\bypass-restrictions\8.0.0.M3\bypass-restrictions-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building challenge 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ challenge ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 57 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ challenge ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 30 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\challenge\target\classes
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/plugin/challenge9/Assignment9.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/plugin/challenge9/Assignment9.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ challenge ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\challenge\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ challenge ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\challenge\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ challenge ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.owasp.webgoat.plugin.challenge1.Assignment1Test
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.406 sec - in org.owasp.webgoat.plugin.challenge1.Assignment1Test
+Running org.owasp.webgoat.plugin.challenge2.Assignment2Test
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec - in org.owasp.webgoat.plugin.challenge2.Assignment2Test
+Running org.owasp.webgoat.plugin.challenge2.ShopEndpointTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.224 sec - in org.owasp.webgoat.plugin.challenge2.ShopEndpointTest
+Running org.owasp.webgoat.plugin.challenge4.VotesEndpointTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.862 sec - in org.owasp.webgoat.plugin.challenge4.VotesEndpointTest
+
+Results :
+
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ challenge ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\challenge\target\challenge-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ challenge ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:challenge:8.0.0.M3:jar
+[INFO] Copying challenge-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\challenge-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ challenge ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\challenge\target\challenge-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\challenge\8.0.0.M3\challenge-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\challenge\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\challenge\8.0.0.M3\challenge-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building client-side-filtering 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ client-side-filtering ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 12 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ client-side-filtering ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\client-side-filtering\target\classes
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/client-side-filtering/src/main/java/org/owasp/webgoat/plugin/Salaries.java: C:\src\WebGoat\WebGoat\webgoat-lessons\client-side-filtering\src\main\java\org\owasp\webgoat\plugin\Salaries.java uses unchecked or unsafe operations.
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/client-side-filtering/src/main/java/org/owasp/webgoat/plugin/Salaries.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ client-side-filtering ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\client-side-filtering\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ client-side-filtering ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ client-side-filtering ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ client-side-filtering ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\client-side-filtering\target\client-side-filtering-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ client-side-filtering ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:client-side-filtering:8.0.0.M3:jar
+[INFO] Copying client-side-filtering-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\client-side-filtering-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ client-side-filtering ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\client-side-filtering\target\client-side-filtering-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\client-side-filtering\8.0.0.M3\client-side-filtering-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\client-side-filtering\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\client-side-filtering\8.0.0.M3\client-side-filtering-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building cross-site-scripting 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- asciidoctor-maven-plugin:1.5.3:process-asciidoc (output-html) @ cross-site-scripting ---
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content1.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content10-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content11-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content12-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content13-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content13a-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content14-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content15-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content15a-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content16-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content2.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content3.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content4.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content5.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content5a.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content5b.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content5c.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content6.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content6a.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content6b.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content7-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content7.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content7b.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content7c.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content8-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content8.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content9-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content9.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_content9a-off.adoc
+[INFO] Rendered C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\main\resources\lessonPlans\en\CrossSiteScripting_plan.adoc
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ cross-site-scripting ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 43 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ cross-site-scripting ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ cross-site-scripting ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ cross-site-scripting ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ cross-site-scripting ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.owasp.webgoat.plugin.DOMCrossSiteScriptingTest
+12034837 << randValue
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.3 sec - in org.owasp.webgoat.plugin.DOMCrossSiteScriptingTest
+Running org.owasp.webgoat.plugin.StoredXssCommentsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.374 sec - in org.owasp.webgoat.plugin.StoredXssCommentsTest
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ cross-site-scripting ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\target\cross-site-scripting-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ cross-site-scripting ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:cross-site-scripting:8.0.0.M3:jar
+[INFO] Copying cross-site-scripting-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\cross-site-scripting-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ cross-site-scripting ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\target\cross-site-scripting-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\cross-site-scripting\8.0.0.M3\cross-site-scripting-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\cross-site-scripting\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\cross-site-scripting\8.0.0.M3\cross-site-scripting-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building html-tampering 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ html-tampering ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ html-tampering ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\html-tampering\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ html-tampering ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\html-tampering\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ html-tampering ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ html-tampering ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ html-tampering ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\html-tampering\target\html-tampering-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ html-tampering ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:html-tampering:8.0.0.M3:jar
+[INFO] Copying html-tampering-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\html-tampering-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ html-tampering ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\html-tampering\target\html-tampering-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\html-tampering\8.0.0.M3\html-tampering-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\html-tampering\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\html-tampering\8.0.0.M3\html-tampering-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building http-basics 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ http-basics ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 14 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ http-basics ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\http-basics\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ http-basics ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\http-basics\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ http-basics ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ http-basics ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ http-basics ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\http-basics\target\http-basics-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ http-basics ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:http-basics:8.0.0.M3:jar
+[INFO] Copying http-basics-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\http-basics-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ http-basics ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\http-basics\target\http-basics-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\http-basics\8.0.0.M3\http-basics-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\http-basics\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\http-basics\8.0.0.M3\http-basics-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building http-proxies 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ http-proxies ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 17 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ http-proxies ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\http-proxies\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ http-proxies ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\http-proxies\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ http-proxies ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\src\WebGoat\WebGoat\webgoat-lessons\http-proxies\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ http-proxies ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.owasp.webgoat.plugin.HttpBasicsInterceptRequestTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.808 sec - in org.owasp.webgoat.plugin.HttpBasicsInterceptRequestTest
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ http-proxies ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\http-proxies\target\http-proxies-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ http-proxies ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:http-proxies:8.0.0.M3:jar
+[INFO] Copying http-proxies-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\http-proxies-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ http-proxies ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\http-proxies\target\http-proxies-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\http-proxies\8.0.0.M3\http-proxies-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\http-proxies\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\http-proxies\8.0.0.M3\http-proxies-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building insecure-login 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ insecure-login ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ insecure-login ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\insecure-login\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ insecure-login ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\insecure-login\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ insecure-login ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ insecure-login ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ insecure-login ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\insecure-login\target\insecure-login-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ insecure-login ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:insecure-login:8.0.0.M3:jar
+[INFO] Copying insecure-login-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\insecure-login-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ insecure-login ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\insecure-login\target\insecure-login-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\insecure-login\8.0.0.M3\insecure-login-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\insecure-login\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\insecure-login\8.0.0.M3\insecure-login-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building jwt 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jwt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ jwt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\src\WebGoat\WebGoat\webgoat-lessons\jwt\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jwt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\jwt\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ jwt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ jwt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ jwt ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\jwt\target\jwt-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ jwt ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:jwt:8.0.0.M3:jar
+[INFO] Copying jwt-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\jwt-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ jwt ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\jwt\target\jwt-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\jwt\8.0.0.M3\jwt-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\jwt\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\jwt\8.0.0.M3\jwt-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building sql-injection 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ sql-injection ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 34 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ sql-injection ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\sql-injection\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ sql-injection ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\sql-injection\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ sql-injection ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\sql-injection\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ sql-injection ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.owasp.webgoat.plugin.introduction.SqlInjectionLesson5aTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+io/console not supported; tty will not be manipulated
+Successful connection to database
+Info - Could not drop servers table
+Info - Could not drop user table
+Info - Could not drop user_login table
+Info - Could not drop pins table
+Info - Could not drop user admin table
+Info - Could not drop product table
+Info - Could not drop message database
+Info - Could not drop employee table
+Info - Could not drop roles table
+Info - Could not drop auth table
+Info - Could not drop ownership table
+Info - Could not drop weather table
+Info - Could not drop transactions table
+Info - Could not drop user_data_tan table
+Info - Could not drop tan table
+Info - Could not drop mfe_images table from database
+Info - Could not drop salaries table
+Success: creating tables.
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.108 sec - in org.owasp.webgoat.plugin.introduction.SqlInjectionLesson5aTest
+Running org.owasp.webgoat.plugin.introduction.SqlInjectionLesson6aTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.151 sec - in org.owasp.webgoat.plugin.introduction.SqlInjectionLesson6aTest
+Running org.owasp.webgoat.plugin.introduction.SqlInjectionLesson6bTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec - in org.owasp.webgoat.plugin.introduction.SqlInjectionLesson6bTest
+Running org.owasp.webgoat.plugin.mitigation.SqlInjectionLesson12aTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.259 sec - in org.owasp.webgoat.plugin.mitigation.SqlInjectionLesson12aTest
+
+Results :
+
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ sql-injection ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\sql-injection\target\sql-injection-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ sql-injection ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:sql-injection:8.0.0.M3:jar
+[INFO] Copying sql-injection-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\sql-injection-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ sql-injection ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\sql-injection\target\sql-injection-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\sql-injection\8.0.0.M3\sql-injection-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\sql-injection\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\sql-injection\8.0.0.M3\sql-injection-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building xxe 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ xxe ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 17 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ xxe ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\xxe\target\classes
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/xxe/src/main/java/org/owasp/webgoat/plugin/BlindSendFileAssignment.java: C:\src\WebGoat\WebGoat\webgoat-lessons\xxe\src\main\java\org\owasp\webgoat\plugin\BlindSendFileAssignment.java uses or overrides a deprecated API.
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/xxe/src/main/java/org/owasp/webgoat/plugin/BlindSendFileAssignment.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ xxe ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\xxe\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ xxe ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\xxe\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ xxe ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.owasp.webgoat.plugin.BlindSendFileAssignmentTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+io/console not supported; tty will not be manipulated
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.032 sec - in org.owasp.webgoat.plugin.BlindSendFileAssignmentTest
+Running org.owasp.webgoat.plugin.ContentTypeAssignmentTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.217 sec - in org.owasp.webgoat.plugin.ContentTypeAssignmentTest
+Running org.owasp.webgoat.plugin.SimpleXXETest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.204 sec - in org.owasp.webgoat.plugin.SimpleXXETest
+
+Results :
+
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ xxe ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\xxe\target\xxe-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ xxe ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:xxe:8.0.0.M3:jar
+[INFO] Copying xxe-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\xxe-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ xxe ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\xxe\target\xxe-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\xxe\8.0.0.M3\xxe-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\xxe\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\xxe\8.0.0.M3\xxe-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building idor 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ idor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 14 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ idor ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\idor\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ idor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\idor\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ idor ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ idor ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ idor ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\idor\target\idor-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ idor ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:idor:8.0.0.M3:jar
+[INFO] Copying idor-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\idor-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ idor ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\idor\target\idor-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\idor\8.0.0.M3\idor-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\idor\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\idor\8.0.0.M3\idor-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building vulnerable-components 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ vulnerable-components ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 24 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ vulnerable-components ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\vulnerable-components\target\classes
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/vulnerable-components/src/main/java/org/owasp/webgoat/plugin/VulnerableComponents.java: C:\src\WebGoat\WebGoat\webgoat-lessons\vulnerable-components\src\main\java\org\owasp\webgoat\plugin\VulnerableComponents.java uses unchecked or unsafe operations.
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/vulnerable-components/src/main/java/org/owasp/webgoat/plugin/VulnerableComponents.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ vulnerable-components ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\vulnerable-components\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ vulnerable-components ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\src\WebGoat\WebGoat\webgoat-lessons\vulnerable-components\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ vulnerable-components ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.owasp.webgoat.plugin.VulnerableComponentsLessonTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.235 sec - in org.owasp.webgoat.plugin.VulnerableComponentsLessonTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ vulnerable-components ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\vulnerable-components\target\vulnerable-components-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ vulnerable-components ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:vulnerable-components:8.0.0.M3:jar
+[INFO] Copying vulnerable-components-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\vulnerable-components-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ vulnerable-components ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\vulnerable-components\target\vulnerable-components-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\vulnerable-components\8.0.0.M3\vulnerable-components-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\vulnerable-components\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\vulnerable-components\8.0.0.M3\vulnerable-components-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building webgoat-introduction 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ webgoat-introduction ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ webgoat-introduction ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\src\WebGoat\WebGoat\webgoat-lessons\webgoat-introduction\target\classes
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/webgoat-introduction/src/main/java/org/owasp/webgoat/plugin/WebGoatIntroduction.java: C:\src\WebGoat\WebGoat\webgoat-lessons\webgoat-introduction\src\main\java\org\owasp\webgoat\plugin\WebGoatIntroduction.java uses unchecked or unsafe operations.
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/webgoat-introduction/src/main/java/org/owasp/webgoat/plugin/WebGoatIntroduction.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ webgoat-introduction ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\webgoat-introduction\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ webgoat-introduction ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ webgoat-introduction ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ webgoat-introduction ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\webgoat-introduction\target\webgoat-introduction-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ webgoat-introduction ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:webgoat-introduction:8.0.0.M3:jar
+[INFO] Copying webgoat-introduction-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\webgoat-introduction-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ webgoat-introduction ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\webgoat-introduction\target\webgoat-introduction-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\webgoat-introduction\8.0.0.M3\webgoat-introduction-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\webgoat-introduction\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\webgoat-introduction\8.0.0.M3\webgoat-introduction-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building webwolf-introduction 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ webwolf-introduction ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 10 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ webwolf-introduction ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\webwolf-introduction\target\classes
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/webwolf-introduction/src/main/java/org/owasp/webgoat/plugin/WebWolfIntroduction.java: C:\src\WebGoat\WebGoat\webgoat-lessons\webwolf-introduction\src\main\java\org\owasp\webgoat\plugin\WebWolfIntroduction.java uses unchecked or unsafe operations.
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/webwolf-introduction/src/main/java/org/owasp/webgoat/plugin/WebWolfIntroduction.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ webwolf-introduction ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\webwolf-introduction\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ webwolf-introduction ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ webwolf-introduction ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ webwolf-introduction ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\webwolf-introduction\target\webwolf-introduction-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ webwolf-introduction ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:webwolf-introduction:8.0.0.M3:jar
+[INFO] Copying webwolf-introduction-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\webwolf-introduction-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ webwolf-introduction ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\webwolf-introduction\target\webwolf-introduction-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\webwolf-introduction\8.0.0.M3\webwolf-introduction-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\webwolf-introduction\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\webwolf-introduction\8.0.0.M3\webwolf-introduction-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building auth-bypass 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ auth-bypass ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ auth-bypass ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\auth-bypass\target\classes
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/auth-bypass/src/main/java/org/owasp/webgoat/plugin/VerifyAccount.java: C:\src\WebGoat\WebGoat\webgoat-lessons\auth-bypass\src\main\java\org\owasp\webgoat\plugin\VerifyAccount.java uses unchecked or unsafe operations.
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/auth-bypass/src/main/java/org/owasp/webgoat/plugin/VerifyAccount.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ auth-bypass ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\auth-bypass\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ auth-bypass ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ auth-bypass ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ auth-bypass ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\auth-bypass\target\auth-bypass-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ auth-bypass ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:auth-bypass:8.0.0.M3:jar
+[INFO] Copying auth-bypass-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\auth-bypass-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ auth-bypass ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\auth-bypass\target\auth-bypass-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\auth-bypass\8.0.0.M3\auth-bypass-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\auth-bypass\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\auth-bypass\8.0.0.M3\auth-bypass-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building missing-function-ac 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ missing-function-ac ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ missing-function-ac ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\missing-function-ac\target\classes
+[WARNING] /C:/src/WebGoat/WebGoat/webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/plugin/Users.java:[3,46] com.sun.org.apache.xpath.internal.axes.HasPositionalPredChecker is internal proprietary API and may be removed in a future release
+[WARNING] /C:/src/WebGoat/WebGoat/webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/plugin/Users.java:[3,46] com.sun.org.apache.xpath.internal.axes.HasPositionalPredChecker is internal proprietary API and may be removed in a future release
+[WARNING] /C:/src/WebGoat/WebGoat/webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/plugin/Users.java:[3,46] com.sun.org.apache.xpath.internal.axes.HasPositionalPredChecker is internal proprietary API and may be removed in a future release
+[WARNING] /C:/src/WebGoat/WebGoat/webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/plugin/Users.java:[3,46] com.sun.org.apache.xpath.internal.axes.HasPositionalPredChecker is internal proprietary API and may be removed in a future release
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/plugin/Users.java: C:\src\WebGoat\WebGoat\webgoat-lessons\missing-function-ac\src\main\java\org\owasp\webgoat\plugin\Users.java uses unchecked or unsafe operations.
+[INFO] /C:/src/WebGoat/WebGoat/webgoat-lessons/missing-function-ac/src/main/java/org/owasp/webgoat/plugin/Users.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ missing-function-ac ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\missing-function-ac\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ missing-function-ac ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\missing-function-ac\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ missing-function-ac ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.owasp.webgoat.plugin.DisplayUserTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 sec - in org.owasp.webgoat.plugin.DisplayUserTest
+Running org.owasp.webgoat.plugin.MissingFunctionACHiddenMenusTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.557 sec - in org.owasp.webgoat.plugin.MissingFunctionACHiddenMenusTest
+Running org.owasp.webgoat.plugin.MissingFunctionACUsersTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec - in org.owasp.webgoat.plugin.MissingFunctionACUsersTest
+Running org.owasp.webgoat.plugin.MissingFunctionYourHashTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 sec - in org.owasp.webgoat.plugin.MissingFunctionYourHashTest
+
+Results :
+
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ missing-function-ac ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\missing-function-ac\target\missing-function-ac-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ missing-function-ac ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:missing-function-ac:8.0.0.M3:jar
+[INFO] Copying missing-function-ac-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\missing-function-ac-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ missing-function-ac ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\missing-function-ac\target\missing-function-ac-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\missing-function-ac\8.0.0.M3\missing-function-ac-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\missing-function-ac\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\missing-function-ac\8.0.0.M3\missing-function-ac-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building csrf 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ csrf ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 16 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ csrf ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to C:\src\WebGoat\WebGoat\webgoat-lessons\csrf\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ csrf ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-lessons\csrf\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ csrf ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\src\WebGoat\WebGoat\webgoat-lessons\csrf\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ csrf ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.owasp.webgoat.plugin.CSRFFeedbackTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+io/console not supported; tty will not be manipulated
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.664 sec - in org.owasp.webgoat.plugin.CSRFFeedbackTest
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ csrf ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-lessons\csrf\target\csrf-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:copy (copy-artifact-src) @ csrf ---
+[INFO] Configured Artifact: org.owasp.webgoat.lesson:csrf:8.0.0.M3:jar
+[INFO] Copying csrf-8.0.0.M3.jar to C:\src\WebGoat\WebGoat\webgoat-container\src\main\resources\plugin_lessons\csrf-8.0.0.M3.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ csrf ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\csrf\target\csrf-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\csrf\8.0.0.M3\csrf-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-lessons\csrf\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\lesson\csrf\8.0.0.M3\csrf-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building webgoat-server 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ webgoat-server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-server\src\main\resources
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-server\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ webgoat-server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\src\WebGoat\WebGoat\webgoat-server\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ webgoat-server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webgoat-server\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ webgoat-server ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ webgoat-server ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ webgoat-server ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webgoat-server\target\webgoat-server-8.0.0.M3.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.5.9.RELEASE:repackage (default) @ webgoat-server ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ webgoat-server ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-server\target\webgoat-server-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\webgoat-server\8.0.0.M3\webgoat-server-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webgoat-server\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\webgoat-server\8.0.0.M3\webgoat-server-8.0.0.M3.pom
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building webwolf 8.0.0.M3
+[INFO] ------------------------------------------------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/maven-metadata.xml (783 B at 498 B/s)
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ webwolf ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 14 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ webwolf ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 17 source files to C:\src\WebGoat\WebGoat\webwolf\target\classes
+[INFO] /C:/src/WebGoat/WebGoat/webwolf/src/main/java/org/owasp/webwolf/requests/WebWolfTraceRepository.java: C:\src\WebGoat\WebGoat\webwolf\src\main\java\org\owasp\webwolf\requests\WebWolfTraceRepository.java uses unchecked or unsafe operations.
+[INFO] /C:/src/WebGoat/WebGoat/webwolf/src/main/java/org/owasp/webwolf/requests/WebWolfTraceRepository.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ webwolf ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\src\WebGoat\WebGoat\webwolf\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ webwolf ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\src\WebGoat\WebGoat\webwolf\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ webwolf ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+11:32:56.715 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:56.733 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+11:32:56.754 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+11:32:56.804 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+11:32:56.861 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest], using SpringBootContextLoader
+11:32:56.872 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: class path resource [org/owasp/webwolf/mailbox/MailboxRepositoryTest-context.xml] does not exist
+11:32:56.873 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: class path resource [org/owasp/webwolf/mailbox/MailboxRepositoryTestContext.groovy] does not exist
+11:32:56.874 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:32:56.876 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: MailboxRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:32:57.076 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.094 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+11:32:57.099 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+11:32:57.099 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [MapPropertySource@2008966511 {name='systemProperties', properties={java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_152\jre\bin, java.vm.version=25.152-b16, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.country=US, user.script=, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\src\WebGoat\WebGoat\webwolf, java.runtime.version=1.8.0_152-b16, basedir=C:\src\WebGoat\WebGoat\webwolf, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_152\jre\lib\endorsed, os.arch=amd64, surefire.real.class.path=C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefirebooter4294595703227812068.jar, java.io.tmpdir=C:\Users\Paul\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 10, sun.jnu.encoding=Cp1252, java.library.path=C:\Program Files\Java\jdk1.8.0_152\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\metasploit-framework\bin\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\;C:\Users\Paul\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\Paul\AppData\Local\GitHubDesktop\bin;C:\Program Files\Maven\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files (x86)\Vim\vim80;C:\Users\Paul\AppData\Local\atom\bin;., surefire.test.class.path=C:\src\WebGoat\WebGoat\webwolf\target\test-classes;C:\src\WebGoat\WebGoat\webwolf\target\classes;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.8.10\jackson-datatype-jsr310-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.10\jackson-core-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.10\jackson-databind-2.8.10.jar;C:\Users\Paul\.m2\repository\com\google\guava\guava\18.0\guava-18.0.jar;C:\Users\Paul\.m2\repository\org\projectlombok\lombok\1.16.18\lombok-1.16.18.jar;C:\Users\Paul\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-cache\1.5.9.RELEASE\spring-boot-starter-cache-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter\1.5.9.RELEASE\spring-boot-starter-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-logging\1.5.9.RELEASE\spring-boot-starter-logging-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;C:\Users\Paul\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context\4.3.13.RELEASE\spring-context-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-beans\4.3.13.RELEASE\spring-beans-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-expression\4.3.13.RELEASE\spring-expression-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context-support\4.3.13.RELEASE\spring-context-support-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-security\1.5.9.RELEASE\spring-boot-starter-security-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aop\4.3.13.RELEASE\spring-aop-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-config\4.2.3.RELEASE\spring-security-config-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-core\4.2.3.RELEASE\spring-security-core-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-web\4.2.3.RELEASE\spring-security-web-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-web\1.5.9.RELEASE\spring-boot-starter-web-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\1.5.9.RELEASE\spring-boot-starter-tomcat-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.23\tomcat-embed-core-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-annotations-api\8.5.23\tomcat-annotations-api-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.23\tomcat-embed-el-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.23\tomcat-embed-websocket-8.5.23.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-validator\5.3.6.Final\hibernate-validator-5.3.6.Final.jar;C:\Users\Paul\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\Paul\.m2\repository\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;C:\Users\Paul\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-web\4.3.13.RELEASE\spring-web-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-webmvc\4.3.13.RELEASE\spring-webmvc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.9.RELEASE\spring-boot-starter-thymeleaf-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf-spring4\2.1.6.RELEASE\thymeleaf-spring4-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;C:\Users\Paul\.m2\repository\org\codehaus\groovy\groovy\2.4.13\groovy-2.4.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\1.5.9.RELEASE\spring-boot-starter-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-actuator\1.5.9.RELEASE\spring-boot-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-springsecurity4\2.1.2.RELEASE\thymeleaf-extras-springsecurity4-2.1.2.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf\2.1.6.RELEASE\thymeleaf-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\ognl\ognl\3.0.8\ognl-3.0.8.jar;C:\Users\Paul\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\Paul\.m2\repository\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\1.5.9.RELEASE\spring-boot-starter-data-jpa-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-aop\1.5.9.RELEASE\spring-boot-starter-aop-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\1.5.9.RELEASE\spring-boot-starter-jdbc-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-jdbc\8.5.23\tomcat-jdbc-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-juli\8.5.23\tomcat-juli-8.5.23.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-jdbc\4.3.13.RELEASE\spring-jdbc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-core\5.0.12.Final\hibernate-core-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Paul\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Paul\.m2\repository\org\jboss\jandex\2.0.0.Final\jandex-2.0.0.Final.jar;C:\Users\Paul\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Paul\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.0.1.Final\hibernate-commons-annotations-5.0.1.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-entitymanager\5.0.12.Final\hibernate-entitymanager-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-jpa\1.11.9.RELEASE\spring-data-jpa-1.11.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-commons\1.13.9.RELEASE\spring-data-commons-1.13.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-orm\4.3.13.RELEASE\spring-orm-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-tx\4.3.13.RELEASE\spring-tx-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aspects\4.3.13.RELEASE\spring-aspects-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-devtools\1.5.9.RELEASE\spring-boot-devtools-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot\1.5.9.RELEASE\spring-boot-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\1.5.9.RELEASE\spring-boot-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\webjars\bootstrap\3.3.7\bootstrap-3.3.7.jar;C:\Users\Paul\.m2\repository\org\webjars\jquery\3.2.1\jquery-3.2.1.jar;C:\Users\Paul\.m2\repository\org\hsqldb\hsqldb\2.3.2\hsqldb-2.3.2.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-test\1.5.9.RELEASE\spring-boot-starter-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test\1.5.9.RELEASE\spring-boot-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\1.5.9.RELEASE\spring-boot-test-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\com\jayway\jsonpath\json-path\2.2.0\json-path-2.2.0.jar;C:\Users\Paul\.m2\repository\net\minidev\json-smart\2.2.1\json-smart-2.2.1.jar;C:\Users\Paul\.m2\repository\net\minidev\accessors-smart\1.1\accessors-smart-1.1.jar;C:\Users\Paul\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;C:\Users\Paul\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Paul\.m2\repository\org\assertj\assertj-core\2.6.0\assertj-core-2.6.0.jar;C:\Users\Paul\.m2\repository\org\mockito\mockito-core\1.10.19\mockito-core-1.10.19.jar;C:\Users\Paul\.m2\repository\org\objenesis\objenesis\2.1\objenesis-2.1.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Users\Paul\.m2\repository\org\skyscreamer\jsonassert\1.4.0\jsonassert-1.4.0.jar;C:\Users\Paul\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-core\4.3.13.RELEASE\spring-core-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-test\4.3.13.RELEASE\spring-test-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;, java.specification.name=Java Platform API Specification, java.class.version=52.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.0, user.home=C:\Users\Paul, user.timezone=America/Los_Angeles, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=Cp1252, java.specification.version=1.8, java.class.path=C:\src\WebGoat\WebGoat\webwolf\target\test-classes;C:\src\WebGoat\WebGoat\webwolf\target\classes;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.8.10\jackson-datatype-jsr310-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.10\jackson-core-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.10\jackson-databind-2.8.10.jar;C:\Users\Paul\.m2\repository\com\google\guava\guava\18.0\guava-18.0.jar;C:\Users\Paul\.m2\repository\org\projectlombok\lombok\1.16.18\lombok-1.16.18.jar;C:\Users\Paul\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-cache\1.5.9.RELEASE\spring-boot-starter-cache-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter\1.5.9.RELEASE\spring-boot-starter-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-logging\1.5.9.RELEASE\spring-boot-starter-logging-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;C:\Users\Paul\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context\4.3.13.RELEASE\spring-context-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-beans\4.3.13.RELEASE\spring-beans-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-expression\4.3.13.RELEASE\spring-expression-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context-support\4.3.13.RELEASE\spring-context-support-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-security\1.5.9.RELEASE\spring-boot-starter-security-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aop\4.3.13.RELEASE\spring-aop-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-config\4.2.3.RELEASE\spring-security-config-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-core\4.2.3.RELEASE\spring-security-core-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-web\4.2.3.RELEASE\spring-security-web-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-web\1.5.9.RELEASE\spring-boot-starter-web-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\1.5.9.RELEASE\spring-boot-starter-tomcat-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.23\tomcat-embed-core-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-annotations-api\8.5.23\tomcat-annotations-api-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.23\tomcat-embed-el-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.23\tomcat-embed-websocket-8.5.23.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-validator\5.3.6.Final\hibernate-validator-5.3.6.Final.jar;C:\Users\Paul\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\Paul\.m2\repository\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;C:\Users\Paul\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-web\4.3.13.RELEASE\spring-web-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-webmvc\4.3.13.RELEASE\spring-webmvc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.9.RELEASE\spring-boot-starter-thymeleaf-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf-spring4\2.1.6.RELEASE\thymeleaf-spring4-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;C:\Users\Paul\.m2\repository\org\codehaus\groovy\groovy\2.4.13\groovy-2.4.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\1.5.9.RELEASE\spring-boot-starter-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-actuator\1.5.9.RELEASE\spring-boot-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-springsecurity4\2.1.2.RELEASE\thymeleaf-extras-springsecurity4-2.1.2.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf\2.1.6.RELEASE\thymeleaf-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\ognl\ognl\3.0.8\ognl-3.0.8.jar;C:\Users\Paul\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\Paul\.m2\repository\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\1.5.9.RELEASE\spring-boot-starter-data-jpa-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-aop\1.5.9.RELEASE\spring-boot-starter-aop-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\1.5.9.RELEASE\spring-boot-starter-jdbc-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-jdbc\8.5.23\tomcat-jdbc-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-juli\8.5.23\tomcat-juli-8.5.23.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-jdbc\4.3.13.RELEASE\spring-jdbc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-core\5.0.12.Final\hibernate-core-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Paul\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Paul\.m2\repository\org\jboss\jandex\2.0.0.Final\jandex-2.0.0.Final.jar;C:\Users\Paul\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Paul\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.0.1.Final\hibernate-commons-annotations-5.0.1.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-entitymanager\5.0.12.Final\hibernate-entitymanager-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-jpa\1.11.9.RELEASE\spring-data-jpa-1.11.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-commons\1.13.9.RELEASE\spring-data-commons-1.13.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-orm\4.3.13.RELEASE\spring-orm-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-tx\4.3.13.RELEASE\spring-tx-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aspects\4.3.13.RELEASE\spring-aspects-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-devtools\1.5.9.RELEASE\spring-boot-devtools-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot\1.5.9.RELEASE\spring-boot-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\1.5.9.RELEASE\spring-boot-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\webjars\bootstrap\3.3.7\bootstrap-3.3.7.jar;C:\Users\Paul\.m2\repository\org\webjars\jquery\3.2.1\jquery-3.2.1.jar;C:\Users\Paul\.m2\repository\org\hsqldb\hsqldb\2.3.2\hsqldb-2.3.2.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-test\1.5.9.RELEASE\spring-boot-starter-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test\1.5.9.RELEASE\spring-boot-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\1.5.9.RELEASE\spring-boot-test-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\com\jayway\jsonpath\json-path\2.2.0\json-path-2.2.0.jar;C:\Users\Paul\.m2\repository\net\minidev\json-smart\2.2.1\json-smart-2.2.1.jar;C:\Users\Paul\.m2\repository\net\minidev\accessors-smart\1.1\accessors-smart-1.1.jar;C:\Users\Paul\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;C:\Users\Paul\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Paul\.m2\repository\org\assertj\assertj-core\2.6.0\assertj-core-2.6.0.jar;C:\Users\Paul\.m2\repository\org\mockito\mockito-core\1.10.19\mockito-core-1.10.19.jar;C:\Users\Paul\.m2\repository\org\objenesis\objenesis\2.1\objenesis-2.1.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Users\Paul\.m2\repository\org\skyscreamer\jsonassert\1.4.0\jsonassert-1.4.0.jar;C:\Users\Paul\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-core\4.3.13.RELEASE\spring-core-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-test\4.3.13.RELEASE\spring-test-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;, user.name=Paul, java.vm.specification.version=1.8, sun.java.command=C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefirebooter4294595703227812068.jar C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefire2041759689050058009tmp C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefire_92719047467730487639tmp, java.home=C:\Program Files\Java\jdk1.8.0_152\jre, sun.arch.data.model=64, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_152, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_152\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_152\jre\classes, java.vendor=Oracle Corporation, localRepository=C:\Users\Paul\.m2\repository, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}}, SystemEnvironmentPropertySource@433874882 {name='systemEnvironment', properties={PATH=C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\metasploit-framework\bin\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\;C:\Users\Paul\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\Paul\AppData\Local\GitHubDesktop\bin;C:\Program Files\Maven\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files (x86)\Vim\vim80;C:\Users\Paul\AppData\Local\atom\bin, USERDOMAIN_ROAMINGPROFILE=PAULS-IDEAPAD32, PROCESSOR_LEVEL=21, SYSTEMDRIVE=C:, SESSIONNAME=Console, ALLUSERSPROFILE=C:\ProgramData, PROCESSOR_ARCHITECTURE=AMD64, MAVEN_HOME=C:\Program Files\Maven\apache-maven-3.5.2\bin\.., PROGRAMFILES=C:\Program Files, PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules, PROGRAMDATA=C:\ProgramData, USERNAME=Paul, WDIR=C:\, FPS_BROWSER_USER_PROFILE_STRING=Default, ONEDRIVE=C:\Users\Paul\OneDrive, CONFIGSETROOT=C:\WINDOWS\ConfigSetRoot, PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, CLASSWORLDS_JAR="C:\Program Files\Maven\apache-maven-3.5.2\bin\..\boot\plexus-classworlds-2.5.2.jar", WINDIR=C:\WINDOWS, HOMEPATH=\Users\Paul, PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 101 Stepping 1, AuthenticAMD, PUBLIC=C:\Users\Public, =::=::\, =EXITCODE=00000000, LOCALAPPDATA=C:\Users\Paul\AppData\Local, COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, USERDOMAIN=PAULS-IDEAPAD32, FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer, LOGONSERVER=\\PAULS-IDEAPAD32, JAVA_HOME=C:\Program Files\Java\jdk1.8.0_152, PROMPT=$P$G, PROGRAMFILES(X86)=C:\Program Files (x86), ERROR_CODE=0, EXEC_DIR=C:\src\WebGoat\WebGoat, =C:=C:\src\WebGoat\WebGoat\webwolf, APPDATA=C:\Users\Paul\AppData\Roaming, PROGRAMW6432=C:\Program Files, SYSTEMROOT=C:\WINDOWS, MAVEN_CMD_LINE_ARGS=install -l build.log, OS=Windows_NT, COMMONPROGRAMW6432=C:\Program Files\Common Files, COMPUTERNAME=PAULS-IDEAPAD32, COMMONPROGRAMFILES=C:\Program Files\Common Files, COMSPEC=C:\WINDOWS\system32\cmd.exe, JAVACMD=C:\Program Files\Java\jdk1.8.0_152\bin\java.exe, MAVEN_PROJECTBASEDIR=C:\src\WebGoat\WebGoat, PROCESSOR_REVISION=6501, CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, TEMP=C:\Users\Paul\AppData\Local\Temp, HOMEDRIVE=C:, USERPROFILE=C:\Users\Paul, TMP=C:\Users\Paul\AppData\Local\Temp, NUMBER_OF_PROCESSORS=4, JVMCONFIG=\.mvn\jvm.config}}]
+11:32:57.134 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [org/owasp/webwolf/mailbox/] to resources [URL [file:/C:/src/WebGoat/WebGoat/webwolf/target/test-classes/org/owasp/webwolf/mailbox/], URL [file:/C:/src/WebGoat/WebGoat/webwolf/target/classes/org/owasp/webwolf/mailbox/]]
+11:32:57.135 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\src\WebGoat\WebGoat\webwolf\target\test-classes\org\owasp\webwolf\mailbox]
+11:32:57.136 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\src\WebGoat\WebGoat\webwolf\target\test-classes\org\owasp\webwolf\mailbox] for files matching pattern [C:/src/WebGoat/WebGoat/webwolf/target/test-classes/org/owasp/webwolf/mailbox/*.class]
+11:32:57.144 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\mailbox]
+11:32:57.144 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\mailbox] for files matching pattern [C:/src/WebGoat/WebGoat/webwolf/target/classes/org/owasp/webwolf/mailbox/*.class]
+11:32:57.148 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:org/owasp/webwolf/mailbox/*.class] to resources [file [C:\src\WebGoat\WebGoat\webwolf\target\test-classes\org\owasp\webwolf\mailbox\MailboxRepositoryTest.class], file [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\mailbox\Email.class], file [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\mailbox\MailboxController.class], file [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\mailbox\MailboxRepository.class]]
+11:32:57.222 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [org/owasp/webwolf/] to resources [URL [file:/C:/src/WebGoat/WebGoat/webwolf/target/test-classes/org/owasp/webwolf/], URL [file:/C:/src/WebGoat/WebGoat/webwolf/target/classes/org/owasp/webwolf/]]
+11:32:57.223 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\src\WebGoat\WebGoat\webwolf\target\test-classes\org\owasp\webwolf]
+11:32:57.223 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\src\WebGoat\WebGoat\webwolf\target\test-classes\org\owasp\webwolf] for files matching pattern [C:/src/WebGoat/WebGoat/webwolf/target/test-classes/org/owasp/webwolf/*.class]
+11:32:57.224 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf]
+11:32:57.225 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf] for files matching pattern [C:/src/WebGoat/WebGoat/webwolf/target/classes/org/owasp/webwolf/*.class]
+11:32:57.228 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:org/owasp/webwolf/*.class] to resources [file [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\FileServer$UploadedFile.class], file [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\FileServer.class], file [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\MvcConfiguration.class], file [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\WebSecurityConfig.class], file [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\WebWolf.class]]
+11:32:57.292 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\src\WebGoat\WebGoat\webwolf\target\classes\org\owasp\webwolf\WebWolf.class]
+11:32:57.296 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.owasp.webwolf.WebWolf for test class org.owasp.webwolf.mailbox.MailboxRepositoryTest
+11:32:57.303 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: using defaults.
+11:32:57.311 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+11:32:57.370 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@418e7838, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61230f6a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3c130745, org.springframework.test.context.support.DirtiesContextTestExecutionListener@cd3fee8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e2e18f2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@470f1802, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@63021689, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@703580bf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3e92efc3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1622f1b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72a7c7e0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2e4b8173]
+11:32:57.378 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.380 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+Running org.owasp.webwolf.mailbox.MailboxRepositoryTest
+11:32:57.391 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.391 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+11:32:57.392 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+11:32:57.392 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+11:32:57.395 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest], using SpringBootContextLoader
+11:32:57.398 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: class path resource [org/owasp/webwolf/mailbox/MailboxRepositoryTest-context.xml] does not exist
+11:32:57.399 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: class path resource [org/owasp/webwolf/mailbox/MailboxRepositoryTestContext.groovy] does not exist
+11:32:57.400 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:32:57.400 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: MailboxRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:32:57.483 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.483 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+11:32:57.483 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+11:32:57.486 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [MapPropertySource@489349054 {name='systemProperties', properties={java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_152\jre\bin, java.vm.version=25.152-b16, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.country=US, user.script=, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\src\WebGoat\WebGoat\webwolf, java.runtime.version=1.8.0_152-b16, basedir=C:\src\WebGoat\WebGoat\webwolf, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_152\jre\lib\endorsed, os.arch=amd64, surefire.real.class.path=C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefirebooter4294595703227812068.jar, java.io.tmpdir=C:\Users\Paul\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 10, sun.jnu.encoding=Cp1252, java.library.path=C:\Program Files\Java\jdk1.8.0_152\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\metasploit-framework\bin\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\;C:\Users\Paul\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\Paul\AppData\Local\GitHubDesktop\bin;C:\Program Files\Maven\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files (x86)\Vim\vim80;C:\Users\Paul\AppData\Local\atom\bin;., surefire.test.class.path=C:\src\WebGoat\WebGoat\webwolf\target\test-classes;C:\src\WebGoat\WebGoat\webwolf\target\classes;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.8.10\jackson-datatype-jsr310-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.10\jackson-core-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.10\jackson-databind-2.8.10.jar;C:\Users\Paul\.m2\repository\com\google\guava\guava\18.0\guava-18.0.jar;C:\Users\Paul\.m2\repository\org\projectlombok\lombok\1.16.18\lombok-1.16.18.jar;C:\Users\Paul\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-cache\1.5.9.RELEASE\spring-boot-starter-cache-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter\1.5.9.RELEASE\spring-boot-starter-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-logging\1.5.9.RELEASE\spring-boot-starter-logging-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;C:\Users\Paul\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context\4.3.13.RELEASE\spring-context-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-beans\4.3.13.RELEASE\spring-beans-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-expression\4.3.13.RELEASE\spring-expression-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context-support\4.3.13.RELEASE\spring-context-support-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-security\1.5.9.RELEASE\spring-boot-starter-security-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aop\4.3.13.RELEASE\spring-aop-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-config\4.2.3.RELEASE\spring-security-config-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-core\4.2.3.RELEASE\spring-security-core-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-web\4.2.3.RELEASE\spring-security-web-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-web\1.5.9.RELEASE\spring-boot-starter-web-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\1.5.9.RELEASE\spring-boot-starter-tomcat-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.23\tomcat-embed-core-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-annotations-api\8.5.23\tomcat-annotations-api-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.23\tomcat-embed-el-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.23\tomcat-embed-websocket-8.5.23.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-validator\5.3.6.Final\hibernate-validator-5.3.6.Final.jar;C:\Users\Paul\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\Paul\.m2\repository\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;C:\Users\Paul\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-web\4.3.13.RELEASE\spring-web-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-webmvc\4.3.13.RELEASE\spring-webmvc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.9.RELEASE\spring-boot-starter-thymeleaf-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf-spring4\2.1.6.RELEASE\thymeleaf-spring4-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;C:\Users\Paul\.m2\repository\org\codehaus\groovy\groovy\2.4.13\groovy-2.4.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\1.5.9.RELEASE\spring-boot-starter-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-actuator\1.5.9.RELEASE\spring-boot-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-springsecurity4\2.1.2.RELEASE\thymeleaf-extras-springsecurity4-2.1.2.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf\2.1.6.RELEASE\thymeleaf-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\ognl\ognl\3.0.8\ognl-3.0.8.jar;C:\Users\Paul\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\Paul\.m2\repository\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\1.5.9.RELEASE\spring-boot-starter-data-jpa-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-aop\1.5.9.RELEASE\spring-boot-starter-aop-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\1.5.9.RELEASE\spring-boot-starter-jdbc-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-jdbc\8.5.23\tomcat-jdbc-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-juli\8.5.23\tomcat-juli-8.5.23.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-jdbc\4.3.13.RELEASE\spring-jdbc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-core\5.0.12.Final\hibernate-core-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Paul\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Paul\.m2\repository\org\jboss\jandex\2.0.0.Final\jandex-2.0.0.Final.jar;C:\Users\Paul\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Paul\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.0.1.Final\hibernate-commons-annotations-5.0.1.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-entitymanager\5.0.12.Final\hibernate-entitymanager-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-jpa\1.11.9.RELEASE\spring-data-jpa-1.11.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-commons\1.13.9.RELEASE\spring-data-commons-1.13.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-orm\4.3.13.RELEASE\spring-orm-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-tx\4.3.13.RELEASE\spring-tx-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aspects\4.3.13.RELEASE\spring-aspects-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-devtools\1.5.9.RELEASE\spring-boot-devtools-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot\1.5.9.RELEASE\spring-boot-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\1.5.9.RELEASE\spring-boot-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\webjars\bootstrap\3.3.7\bootstrap-3.3.7.jar;C:\Users\Paul\.m2\repository\org\webjars\jquery\3.2.1\jquery-3.2.1.jar;C:\Users\Paul\.m2\repository\org\hsqldb\hsqldb\2.3.2\hsqldb-2.3.2.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-test\1.5.9.RELEASE\spring-boot-starter-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test\1.5.9.RELEASE\spring-boot-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\1.5.9.RELEASE\spring-boot-test-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\com\jayway\jsonpath\json-path\2.2.0\json-path-2.2.0.jar;C:\Users\Paul\.m2\repository\net\minidev\json-smart\2.2.1\json-smart-2.2.1.jar;C:\Users\Paul\.m2\repository\net\minidev\accessors-smart\1.1\accessors-smart-1.1.jar;C:\Users\Paul\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;C:\Users\Paul\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Paul\.m2\repository\org\assertj\assertj-core\2.6.0\assertj-core-2.6.0.jar;C:\Users\Paul\.m2\repository\org\mockito\mockito-core\1.10.19\mockito-core-1.10.19.jar;C:\Users\Paul\.m2\repository\org\objenesis\objenesis\2.1\objenesis-2.1.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Users\Paul\.m2\repository\org\skyscreamer\jsonassert\1.4.0\jsonassert-1.4.0.jar;C:\Users\Paul\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-core\4.3.13.RELEASE\spring-core-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-test\4.3.13.RELEASE\spring-test-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;, java.specification.name=Java Platform API Specification, java.class.version=52.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.0, user.home=C:\Users\Paul, user.timezone=America/Los_Angeles, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=Cp1252, java.specification.version=1.8, java.class.path=C:\src\WebGoat\WebGoat\webwolf\target\test-classes;C:\src\WebGoat\WebGoat\webwolf\target\classes;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.8.10\jackson-datatype-jsr310-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.10\jackson-core-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.10\jackson-databind-2.8.10.jar;C:\Users\Paul\.m2\repository\com\google\guava\guava\18.0\guava-18.0.jar;C:\Users\Paul\.m2\repository\org\projectlombok\lombok\1.16.18\lombok-1.16.18.jar;C:\Users\Paul\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-cache\1.5.9.RELEASE\spring-boot-starter-cache-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter\1.5.9.RELEASE\spring-boot-starter-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-logging\1.5.9.RELEASE\spring-boot-starter-logging-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;C:\Users\Paul\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context\4.3.13.RELEASE\spring-context-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-beans\4.3.13.RELEASE\spring-beans-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-expression\4.3.13.RELEASE\spring-expression-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context-support\4.3.13.RELEASE\spring-context-support-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-security\1.5.9.RELEASE\spring-boot-starter-security-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aop\4.3.13.RELEASE\spring-aop-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-config\4.2.3.RELEASE\spring-security-config-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-core\4.2.3.RELEASE\spring-security-core-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-web\4.2.3.RELEASE\spring-security-web-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-web\1.5.9.RELEASE\spring-boot-starter-web-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\1.5.9.RELEASE\spring-boot-starter-tomcat-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.23\tomcat-embed-core-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-annotations-api\8.5.23\tomcat-annotations-api-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.23\tomcat-embed-el-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.23\tomcat-embed-websocket-8.5.23.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-validator\5.3.6.Final\hibernate-validator-5.3.6.Final.jar;C:\Users\Paul\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\Paul\.m2\repository\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;C:\Users\Paul\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-web\4.3.13.RELEASE\spring-web-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-webmvc\4.3.13.RELEASE\spring-webmvc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.9.RELEASE\spring-boot-starter-thymeleaf-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf-spring4\2.1.6.RELEASE\thymeleaf-spring4-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;C:\Users\Paul\.m2\repository\org\codehaus\groovy\groovy\2.4.13\groovy-2.4.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\1.5.9.RELEASE\spring-boot-starter-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-actuator\1.5.9.RELEASE\spring-boot-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-springsecurity4\2.1.2.RELEASE\thymeleaf-extras-springsecurity4-2.1.2.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf\2.1.6.RELEASE\thymeleaf-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\ognl\ognl\3.0.8\ognl-3.0.8.jar;C:\Users\Paul\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\Paul\.m2\repository\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\1.5.9.RELEASE\spring-boot-starter-data-jpa-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-aop\1.5.9.RELEASE\spring-boot-starter-aop-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\1.5.9.RELEASE\spring-boot-starter-jdbc-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-jdbc\8.5.23\tomcat-jdbc-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-juli\8.5.23\tomcat-juli-8.5.23.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-jdbc\4.3.13.RELEASE\spring-jdbc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-core\5.0.12.Final\hibernate-core-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Paul\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Paul\.m2\repository\org\jboss\jandex\2.0.0.Final\jandex-2.0.0.Final.jar;C:\Users\Paul\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Paul\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.0.1.Final\hibernate-commons-annotations-5.0.1.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-entitymanager\5.0.12.Final\hibernate-entitymanager-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-jpa\1.11.9.RELEASE\spring-data-jpa-1.11.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-commons\1.13.9.RELEASE\spring-data-commons-1.13.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-orm\4.3.13.RELEASE\spring-orm-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-tx\4.3.13.RELEASE\spring-tx-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aspects\4.3.13.RELEASE\spring-aspects-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-devtools\1.5.9.RELEASE\spring-boot-devtools-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot\1.5.9.RELEASE\spring-boot-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\1.5.9.RELEASE\spring-boot-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\webjars\bootstrap\3.3.7\bootstrap-3.3.7.jar;C:\Users\Paul\.m2\repository\org\webjars\jquery\3.2.1\jquery-3.2.1.jar;C:\Users\Paul\.m2\repository\org\hsqldb\hsqldb\2.3.2\hsqldb-2.3.2.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-test\1.5.9.RELEASE\spring-boot-starter-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test\1.5.9.RELEASE\spring-boot-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\1.5.9.RELEASE\spring-boot-test-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\com\jayway\jsonpath\json-path\2.2.0\json-path-2.2.0.jar;C:\Users\Paul\.m2\repository\net\minidev\json-smart\2.2.1\json-smart-2.2.1.jar;C:\Users\Paul\.m2\repository\net\minidev\accessors-smart\1.1\accessors-smart-1.1.jar;C:\Users\Paul\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;C:\Users\Paul\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Paul\.m2\repository\org\assertj\assertj-core\2.6.0\assertj-core-2.6.0.jar;C:\Users\Paul\.m2\repository\org\mockito\mockito-core\1.10.19\mockito-core-1.10.19.jar;C:\Users\Paul\.m2\repository\org\objenesis\objenesis\2.1\objenesis-2.1.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Users\Paul\.m2\repository\org\skyscreamer\jsonassert\1.4.0\jsonassert-1.4.0.jar;C:\Users\Paul\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-core\4.3.13.RELEASE\spring-core-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-test\4.3.13.RELEASE\spring-test-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;, user.name=Paul, java.vm.specification.version=1.8, sun.java.command=C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefirebooter4294595703227812068.jar C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefire2041759689050058009tmp C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefire_92719047467730487639tmp, java.home=C:\Program Files\Java\jdk1.8.0_152\jre, sun.arch.data.model=64, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_152, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_152\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_152\jre\classes, java.vendor=Oracle Corporation, localRepository=C:\Users\Paul\.m2\repository, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}}, SystemEnvironmentPropertySource@915416632 {name='systemEnvironment', properties={PATH=C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\metasploit-framework\bin\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\;C:\Users\Paul\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\Paul\AppData\Local\GitHubDesktop\bin;C:\Program Files\Maven\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files (x86)\Vim\vim80;C:\Users\Paul\AppData\Local\atom\bin, USERDOMAIN_ROAMINGPROFILE=PAULS-IDEAPAD32, PROCESSOR_LEVEL=21, SYSTEMDRIVE=C:, SESSIONNAME=Console, ALLUSERSPROFILE=C:\ProgramData, PROCESSOR_ARCHITECTURE=AMD64, MAVEN_HOME=C:\Program Files\Maven\apache-maven-3.5.2\bin\.., PROGRAMFILES=C:\Program Files, PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules, PROGRAMDATA=C:\ProgramData, USERNAME=Paul, WDIR=C:\, FPS_BROWSER_USER_PROFILE_STRING=Default, ONEDRIVE=C:\Users\Paul\OneDrive, CONFIGSETROOT=C:\WINDOWS\ConfigSetRoot, PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, CLASSWORLDS_JAR="C:\Program Files\Maven\apache-maven-3.5.2\bin\..\boot\plexus-classworlds-2.5.2.jar", WINDIR=C:\WINDOWS, HOMEPATH=\Users\Paul, PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 101 Stepping 1, AuthenticAMD, PUBLIC=C:\Users\Public, =::=::\, =EXITCODE=00000000, LOCALAPPDATA=C:\Users\Paul\AppData\Local, COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, USERDOMAIN=PAULS-IDEAPAD32, FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer, LOGONSERVER=\\PAULS-IDEAPAD32, JAVA_HOME=C:\Program Files\Java\jdk1.8.0_152, PROMPT=$P$G, PROGRAMFILES(X86)=C:\Program Files (x86), ERROR_CODE=0, EXEC_DIR=C:\src\WebGoat\WebGoat, =C:=C:\src\WebGoat\WebGoat\webwolf, APPDATA=C:\Users\Paul\AppData\Roaming, PROGRAMW6432=C:\Program Files, SYSTEMROOT=C:\WINDOWS, MAVEN_CMD_LINE_ARGS=install -l build.log, OS=Windows_NT, COMMONPROGRAMW6432=C:\Program Files\Common Files, COMPUTERNAME=PAULS-IDEAPAD32, COMMONPROGRAMFILES=C:\Program Files\Common Files, COMSPEC=C:\WINDOWS\system32\cmd.exe, JAVACMD=C:\Program Files\Java\jdk1.8.0_152\bin\java.exe, MAVEN_PROJECTBASEDIR=C:\src\WebGoat\WebGoat, PROCESSOR_REVISION=6501, CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, TEMP=C:\Users\Paul\AppData\Local\Temp, HOMEDRIVE=C:, USERPROFILE=C:\Users\Paul, TMP=C:\Users\Paul\AppData\Local\Temp, NUMBER_OF_PROCESSORS=4, JVMCONFIG=\.mvn\jvm.config}}]
+11:32:57.500 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.owasp.webwolf.WebWolf for test class org.owasp.webwolf.mailbox.MailboxRepositoryTest
+11:32:57.512 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]: using defaults.
+11:32:57.537 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+11:32:57.550 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3023df74, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@313ac989, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4562e04d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2a65fe7c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4135c3b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6302bbb1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@31304f14, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@34a3d150, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2a4fb17b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5c6648b0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6f1de4c7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@459e9125]
+11:32:57.553 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.553 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.558 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.559 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.561 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.561 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.574 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@77888435 testClass = MailboxRepositoryTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@73a1e9a9 testClass = MailboxRepositoryTest, locations = '{}', classes = '{class org.owasp.webwolf.WebWolf}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@71d44a3 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2473b9ce, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3439f68d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@77a57272, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@24906d8b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7fad8c79], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+11:32:57.577 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.578 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [org.owasp.webwolf.mailbox.MailboxRepositoryTest]
+11:32:57.581 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@77888435 testClass = MailboxRepositoryTest, testInstance = org.owasp.webwolf.mailbox.MailboxRepositoryTest@397fbdb, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@73a1e9a9 testClass = MailboxRepositoryTest, locations = '{}', classes = '{class org.owasp.webwolf.WebWolf}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@71d44a3 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2473b9ce, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3439f68d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@77a57272, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@24906d8b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7fad8c79], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
+11:32:57.759 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+11:32:57.759 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+11:32:57.760 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [MapPropertySource@355115154 {name='systemProperties', properties={java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_152\jre\bin, java.vm.version=25.152-b16, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.country=US, user.script=, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\src\WebGoat\WebGoat\webwolf, java.runtime.version=1.8.0_152-b16, basedir=C:\src\WebGoat\WebGoat\webwolf, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_152\jre\lib\endorsed, os.arch=amd64, surefire.real.class.path=C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefirebooter4294595703227812068.jar, java.io.tmpdir=C:\Users\Paul\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 10, sun.jnu.encoding=Cp1252, java.library.path=C:\Program Files\Java\jdk1.8.0_152\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\metasploit-framework\bin\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\;C:\Users\Paul\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\Paul\AppData\Local\GitHubDesktop\bin;C:\Program Files\Maven\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files (x86)\Vim\vim80;C:\Users\Paul\AppData\Local\atom\bin;., surefire.test.class.path=C:\src\WebGoat\WebGoat\webwolf\target\test-classes;C:\src\WebGoat\WebGoat\webwolf\target\classes;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.8.10\jackson-datatype-jsr310-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.10\jackson-core-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.10\jackson-databind-2.8.10.jar;C:\Users\Paul\.m2\repository\com\google\guava\guava\18.0\guava-18.0.jar;C:\Users\Paul\.m2\repository\org\projectlombok\lombok\1.16.18\lombok-1.16.18.jar;C:\Users\Paul\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-cache\1.5.9.RELEASE\spring-boot-starter-cache-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter\1.5.9.RELEASE\spring-boot-starter-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-logging\1.5.9.RELEASE\spring-boot-starter-logging-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;C:\Users\Paul\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context\4.3.13.RELEASE\spring-context-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-beans\4.3.13.RELEASE\spring-beans-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-expression\4.3.13.RELEASE\spring-expression-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context-support\4.3.13.RELEASE\spring-context-support-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-security\1.5.9.RELEASE\spring-boot-starter-security-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aop\4.3.13.RELEASE\spring-aop-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-config\4.2.3.RELEASE\spring-security-config-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-core\4.2.3.RELEASE\spring-security-core-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-web\4.2.3.RELEASE\spring-security-web-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-web\1.5.9.RELEASE\spring-boot-starter-web-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\1.5.9.RELEASE\spring-boot-starter-tomcat-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.23\tomcat-embed-core-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-annotations-api\8.5.23\tomcat-annotations-api-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.23\tomcat-embed-el-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.23\tomcat-embed-websocket-8.5.23.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-validator\5.3.6.Final\hibernate-validator-5.3.6.Final.jar;C:\Users\Paul\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\Paul\.m2\repository\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;C:\Users\Paul\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-web\4.3.13.RELEASE\spring-web-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-webmvc\4.3.13.RELEASE\spring-webmvc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.9.RELEASE\spring-boot-starter-thymeleaf-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf-spring4\2.1.6.RELEASE\thymeleaf-spring4-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;C:\Users\Paul\.m2\repository\org\codehaus\groovy\groovy\2.4.13\groovy-2.4.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\1.5.9.RELEASE\spring-boot-starter-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-actuator\1.5.9.RELEASE\spring-boot-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-springsecurity4\2.1.2.RELEASE\thymeleaf-extras-springsecurity4-2.1.2.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf\2.1.6.RELEASE\thymeleaf-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\ognl\ognl\3.0.8\ognl-3.0.8.jar;C:\Users\Paul\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\Paul\.m2\repository\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\1.5.9.RELEASE\spring-boot-starter-data-jpa-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-aop\1.5.9.RELEASE\spring-boot-starter-aop-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\1.5.9.RELEASE\spring-boot-starter-jdbc-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-jdbc\8.5.23\tomcat-jdbc-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-juli\8.5.23\tomcat-juli-8.5.23.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-jdbc\4.3.13.RELEASE\spring-jdbc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-core\5.0.12.Final\hibernate-core-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Paul\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Paul\.m2\repository\org\jboss\jandex\2.0.0.Final\jandex-2.0.0.Final.jar;C:\Users\Paul\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Paul\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.0.1.Final\hibernate-commons-annotations-5.0.1.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-entitymanager\5.0.12.Final\hibernate-entitymanager-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-jpa\1.11.9.RELEASE\spring-data-jpa-1.11.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-commons\1.13.9.RELEASE\spring-data-commons-1.13.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-orm\4.3.13.RELEASE\spring-orm-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-tx\4.3.13.RELEASE\spring-tx-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aspects\4.3.13.RELEASE\spring-aspects-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-devtools\1.5.9.RELEASE\spring-boot-devtools-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot\1.5.9.RELEASE\spring-boot-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\1.5.9.RELEASE\spring-boot-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\webjars\bootstrap\3.3.7\bootstrap-3.3.7.jar;C:\Users\Paul\.m2\repository\org\webjars\jquery\3.2.1\jquery-3.2.1.jar;C:\Users\Paul\.m2\repository\org\hsqldb\hsqldb\2.3.2\hsqldb-2.3.2.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-test\1.5.9.RELEASE\spring-boot-starter-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test\1.5.9.RELEASE\spring-boot-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\1.5.9.RELEASE\spring-boot-test-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\com\jayway\jsonpath\json-path\2.2.0\json-path-2.2.0.jar;C:\Users\Paul\.m2\repository\net\minidev\json-smart\2.2.1\json-smart-2.2.1.jar;C:\Users\Paul\.m2\repository\net\minidev\accessors-smart\1.1\accessors-smart-1.1.jar;C:\Users\Paul\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;C:\Users\Paul\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Paul\.m2\repository\org\assertj\assertj-core\2.6.0\assertj-core-2.6.0.jar;C:\Users\Paul\.m2\repository\org\mockito\mockito-core\1.10.19\mockito-core-1.10.19.jar;C:\Users\Paul\.m2\repository\org\objenesis\objenesis\2.1\objenesis-2.1.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Users\Paul\.m2\repository\org\skyscreamer\jsonassert\1.4.0\jsonassert-1.4.0.jar;C:\Users\Paul\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-core\4.3.13.RELEASE\spring-core-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-test\4.3.13.RELEASE\spring-test-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;, java.specification.name=Java Platform API Specification, java.class.version=52.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.0, user.home=C:\Users\Paul, user.timezone=America/Los_Angeles, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=Cp1252, java.specification.version=1.8, java.class.path=C:\src\WebGoat\WebGoat\webwolf\target\test-classes;C:\src\WebGoat\WebGoat\webwolf\target\classes;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.8.10\jackson-datatype-jsr310-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.10\jackson-core-2.8.10.jar;C:\Users\Paul\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.10\jackson-databind-2.8.10.jar;C:\Users\Paul\.m2\repository\com\google\guava\guava\18.0\guava-18.0.jar;C:\Users\Paul\.m2\repository\org\projectlombok\lombok\1.16.18\lombok-1.16.18.jar;C:\Users\Paul\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-cache\1.5.9.RELEASE\spring-boot-starter-cache-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter\1.5.9.RELEASE\spring-boot-starter-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-logging\1.5.9.RELEASE\spring-boot-starter-logging-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;C:\Users\Paul\.m2\repository\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;C:\Users\Paul\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context\4.3.13.RELEASE\spring-context-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-beans\4.3.13.RELEASE\spring-beans-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-expression\4.3.13.RELEASE\spring-expression-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-context-support\4.3.13.RELEASE\spring-context-support-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-security\1.5.9.RELEASE\spring-boot-starter-security-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aop\4.3.13.RELEASE\spring-aop-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-config\4.2.3.RELEASE\spring-security-config-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-core\4.2.3.RELEASE\spring-security-core-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\security\spring-security-web\4.2.3.RELEASE\spring-security-web-4.2.3.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-web\1.5.9.RELEASE\spring-boot-starter-web-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\1.5.9.RELEASE\spring-boot-starter-tomcat-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\8.5.23\tomcat-embed-core-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-annotations-api\8.5.23\tomcat-annotations-api-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\8.5.23\tomcat-embed-el-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.23\tomcat-embed-websocket-8.5.23.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-validator\5.3.6.Final\hibernate-validator-5.3.6.Final.jar;C:\Users\Paul\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\Paul\.m2\repository\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;C:\Users\Paul\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-web\4.3.13.RELEASE\spring-web-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-webmvc\4.3.13.RELEASE\spring-webmvc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.9.RELEASE\spring-boot-starter-thymeleaf-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf-spring4\2.1.6.RELEASE\thymeleaf-spring4-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;C:\Users\Paul\.m2\repository\org\codehaus\groovy\groovy\2.4.13\groovy-2.4.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\1.5.9.RELEASE\spring-boot-starter-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-actuator\1.5.9.RELEASE\spring-boot-actuator-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-springsecurity4\2.1.2.RELEASE\thymeleaf-extras-springsecurity4-2.1.2.RELEASE.jar;C:\Users\Paul\.m2\repository\org\thymeleaf\thymeleaf\2.1.6.RELEASE\thymeleaf-2.1.6.RELEASE.jar;C:\Users\Paul\.m2\repository\ognl\ognl\3.0.8\ognl-3.0.8.jar;C:\Users\Paul\.m2\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;C:\Users\Paul\.m2\repository\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\1.5.9.RELEASE\spring-boot-starter-data-jpa-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-aop\1.5.9.RELEASE\spring-boot-starter-aop-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\1.5.9.RELEASE\spring-boot-starter-jdbc-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-jdbc\8.5.23\tomcat-jdbc-8.5.23.jar;C:\Users\Paul\.m2\repository\org\apache\tomcat\tomcat-juli\8.5.23\tomcat-juli-8.5.23.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-jdbc\4.3.13.RELEASE\spring-jdbc-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-core\5.0.12.Final\hibernate-core-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Paul\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Paul\.m2\repository\org\jboss\jandex\2.0.0.Final\jandex-2.0.0.Final.jar;C:\Users\Paul\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Paul\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.0.1.Final\hibernate-commons-annotations-5.0.1.Final.jar;C:\Users\Paul\.m2\repository\org\hibernate\hibernate-entitymanager\5.0.12.Final\hibernate-entitymanager-5.0.12.Final.jar;C:\Users\Paul\.m2\repository\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-jpa\1.11.9.RELEASE\spring-data-jpa-1.11.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\data\spring-data-commons\1.13.9.RELEASE\spring-data-commons-1.13.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-orm\4.3.13.RELEASE\spring-orm-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-tx\4.3.13.RELEASE\spring-tx-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-aspects\4.3.13.RELEASE\spring-aspects-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-devtools\1.5.9.RELEASE\spring-boot-devtools-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot\1.5.9.RELEASE\spring-boot-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\1.5.9.RELEASE\spring-boot-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\webjars\bootstrap\3.3.7\bootstrap-3.3.7.jar;C:\Users\Paul\.m2\repository\org\webjars\jquery\3.2.1\jquery-3.2.1.jar;C:\Users\Paul\.m2\repository\org\hsqldb\hsqldb\2.3.2\hsqldb-2.3.2.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-starter-test\1.5.9.RELEASE\spring-boot-starter-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test\1.5.9.RELEASE\spring-boot-test-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\1.5.9.RELEASE\spring-boot-test-autoconfigure-1.5.9.RELEASE.jar;C:\Users\Paul\.m2\repository\com\jayway\jsonpath\json-path\2.2.0\json-path-2.2.0.jar;C:\Users\Paul\.m2\repository\net\minidev\json-smart\2.2.1\json-smart-2.2.1.jar;C:\Users\Paul\.m2\repository\net\minidev\accessors-smart\1.1\accessors-smart-1.1.jar;C:\Users\Paul\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;C:\Users\Paul\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Paul\.m2\repository\org\assertj\assertj-core\2.6.0\assertj-core-2.6.0.jar;C:\Users\Paul\.m2\repository\org\mockito\mockito-core\1.10.19\mockito-core-1.10.19.jar;C:\Users\Paul\.m2\repository\org\objenesis\objenesis\2.1\objenesis-2.1.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Paul\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Users\Paul\.m2\repository\org\skyscreamer\jsonassert\1.4.0\jsonassert-1.4.0.jar;C:\Users\Paul\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-core\4.3.13.RELEASE\spring-core-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\springframework\spring-test\4.3.13.RELEASE\spring-test-4.3.13.RELEASE.jar;C:\Users\Paul\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;, user.name=Paul, java.vm.specification.version=1.8, sun.java.command=C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefirebooter4294595703227812068.jar C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefire2041759689050058009tmp C:\src\WebGoat\WebGoat\webwolf\target\surefire\surefire_92719047467730487639tmp, java.home=C:\Program Files\Java\jdk1.8.0_152\jre, sun.arch.data.model=64, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_152, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_152\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_152\jre\classes, java.vendor=Oracle Corporation, localRepository=C:\Users\Paul\.m2\repository, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}}, SystemEnvironmentPropertySource@1151844284 {name='systemEnvironment', properties={PATH=C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\metasploit-framework\bin\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Paul\AppData\Local\Programs\Python\Python36-32\;C:\Users\Paul\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\Paul\AppData\Local\GitHubDesktop\bin;C:\Program Files\Maven\apache-maven-3.5.2\bin;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Program Files (x86)\Vim\vim80;C:\Users\Paul\AppData\Local\atom\bin, USERDOMAIN_ROAMINGPROFILE=PAULS-IDEAPAD32, PROCESSOR_LEVEL=21, SYSTEMDRIVE=C:, SESSIONNAME=Console, ALLUSERSPROFILE=C:\ProgramData, PROCESSOR_ARCHITECTURE=AMD64, MAVEN_HOME=C:\Program Files\Maven\apache-maven-3.5.2\bin\.., PROGRAMFILES=C:\Program Files, PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules, PROGRAMDATA=C:\ProgramData, USERNAME=Paul, WDIR=C:\, FPS_BROWSER_USER_PROFILE_STRING=Default, ONEDRIVE=C:\Users\Paul\OneDrive, CONFIGSETROOT=C:\WINDOWS\ConfigSetRoot, PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, CLASSWORLDS_JAR="C:\Program Files\Maven\apache-maven-3.5.2\bin\..\boot\plexus-classworlds-2.5.2.jar", WINDIR=C:\WINDOWS, HOMEPATH=\Users\Paul, PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 101 Stepping 1, AuthenticAMD, PUBLIC=C:\Users\Public, =::=::\, =EXITCODE=00000000, LOCALAPPDATA=C:\Users\Paul\AppData\Local, COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, USERDOMAIN=PAULS-IDEAPAD32, FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer, LOGONSERVER=\\PAULS-IDEAPAD32, JAVA_HOME=C:\Program Files\Java\jdk1.8.0_152, PROMPT=$P$G, PROGRAMFILES(X86)=C:\Program Files (x86), ERROR_CODE=0, EXEC_DIR=C:\src\WebGoat\WebGoat, =C:=C:\src\WebGoat\WebGoat\webwolf, APPDATA=C:\Users\Paul\AppData\Roaming, PROGRAMW6432=C:\Program Files, SYSTEMROOT=C:\WINDOWS, MAVEN_CMD_LINE_ARGS=install -l build.log, OS=Windows_NT, COMMONPROGRAMW6432=C:\Program Files\Common Files, COMPUTERNAME=PAULS-IDEAPAD32, COMMONPROGRAMFILES=C:\Program Files\Common Files, COMSPEC=C:\WINDOWS\system32\cmd.exe, JAVACMD=C:\Program Files\Java\jdk1.8.0_152\bin\java.exe, MAVEN_PROJECTBASEDIR=C:\src\WebGoat\WebGoat, PROCESSOR_REVISION=6501, CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, TEMP=C:\Users\Paul\AppData\Local\Temp, HOMEDRIVE=C:, USERPROFILE=C:\Users\Paul, TMP=C:\Users\Paul\AppData\Local\Temp, NUMBER_OF_PROCESSORS=4, JVMCONFIG=\.mvn\jvm.config}}]
+11:32:57.764 [main] DEBUG org.springframework.core.env.MutablePropertySources - Adding PropertySource 'inline' with highest search precedence
+11:32:57.785 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+11:32:57.786 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'Inlined Test Properties' with highest search precedence
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+2018-02-23 11:32:58.649  INFO 5500 --- [           main] o.o.w.mailbox.MailboxRepositoryTest      : Starting MailboxRepositoryTest on Pauls-IdeaPad320 with PID 5500 (started by Paul in C:\src\WebGoat\WebGoat\webwolf)
+2018-02-23 11:32:58.650 DEBUG 5500 --- [           main] o.o.w.mailbox.MailboxRepositoryTest      : Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-23 11:32:58.651  INFO 5500 --- [           main] o.o.w.mailbox.MailboxRepositoryTest      : No active profile set, falling back to default profiles: default
+2018-02-23 11:32:59.307  INFO 5500 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3b6d844d: startup date [Fri Feb 23 11:32:59 PST 2018]; root of context hierarchy
+2018-02-23 11:33:01.203  INFO 5500 --- [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2018-02-23 11:33:01.205  INFO 5500 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]] with [Root bean: class [org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2018-02-23 11:33:02.621  INFO 5500 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:hsqldb:mem:7ac9bf46-1d50-4d9b-aa4f-66660e55241c', username='sa'
+2018-02-23 11:33:04.290  INFO 5500 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-23 11:33:04.328  INFO 5500 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-23 11:33:04.544  INFO 5500 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-23 11:33:04.549  INFO 5500 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-23 11:33:04.553  INFO 5500 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-23 11:33:04.675  INFO 5500 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-23 11:33:05.072  INFO 5500 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-23 11:33:06.625  INFO 5500 --- [           main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-02-23 11:33:06.669  INFO 5500 --- [           main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: email
+2018-02-23 11:33:06.671  INFO 5500 --- [           main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: email
+2018-02-23 11:33:06.684  INFO 5500 --- [           main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: web_goat_user
+2018-02-23 11:33:06.685  INFO 5500 --- [           main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: web_goat_user
+2018-02-23 11:33:06.809  INFO 5500 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-23 11:33:07.769  INFO 5500 --- [           main] o.o.w.mailbox.MailboxRepositoryTest      : Started MailboxRepositoryTest in 9.978 seconds (JVM running for 12.177)
+2018-02-23 11:33:07.861  INFO 5500 --- [           main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@77888435 testClass = MailboxRepositoryTest, testInstance = org.owasp.webwolf.mailbox.MailboxRepositoryTest@397fbdb, testMethod = emailShouldBeSaved@MailboxRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@73a1e9a9 testClass = MailboxRepositoryTest, locations = '{}', classes = '{class org.owasp.webwolf.WebWolf}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@71d44a3 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2473b9ce, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3439f68d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@77a57272, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@24906d8b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7fad8c79], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@38ee7a9d]; rollback [true]
+Hibernate: insert into email (id, contents, recipient, sender, time, title) values (default, ?, ?, ?, ?, ?)
+2018-02-23 11:33:08.080  INFO 5500 --- [           main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@77888435 testClass = MailboxRepositoryTest, testInstance = org.owasp.webwolf.mailbox.MailboxRepositoryTest@397fbdb, testMethod = emailShouldBeSaved@MailboxRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@73a1e9a9 testClass = MailboxRepositoryTest, locations = '{}', classes = '{class org.owasp.webwolf.WebWolf}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@71d44a3 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2473b9ce, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3439f68d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@77a57272, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@24906d8b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7fad8c79], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+2018-02-23 11:33:08.093  INFO 5500 --- [           main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@77888435 testClass = MailboxRepositoryTest, testInstance = org.owasp.webwolf.mailbox.MailboxRepositoryTest@4dad8ec0, testMethod = savedEmailShouldBeFoundByReceipient@MailboxRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@73a1e9a9 testClass = MailboxRepositoryTest, locations = '{}', classes = '{class org.owasp.webwolf.WebWolf}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@71d44a3 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2473b9ce, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3439f68d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@77a57272, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@24906d8b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7fad8c79], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@38ee7a9d]; rollback [true]
+Hibernate: insert into email (id, contents, recipient, sender, time, title) values (default, ?, ?, ?, ?, ?)
+2018-02-23 11:33:08.146  INFO 5500 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: select email0_.id as id1_0_, email0_.contents as contents2_0_, email0_.recipient as recipien3_0_, email0_.sender as sender4_0_, email0_.time as time5_0_, email0_.title as title6_0_ from email email0_ where email0_.recipient=? order by email0_.time desc
+2018-02-23 11:33:08.423  INFO 5500 --- [           main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@77888435 testClass = MailboxRepositoryTest, testInstance = org.owasp.webwolf.mailbox.MailboxRepositoryTest@4dad8ec0, testMethod = savedEmailShouldBeFoundByReceipient@MailboxRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@73a1e9a9 testClass = MailboxRepositoryTest, locations = '{}', classes = '{class org.owasp.webwolf.WebWolf}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@71d44a3 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2473b9ce, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3439f68d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@77a57272, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@24906d8b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7fad8c79], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.037 sec - in org.owasp.webwolf.mailbox.MailboxRepositoryTest
+2018-02-23 11:33:08.430  INFO 5500 --- [       Thread-3] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3b6d844d: startup date [Fri Feb 23 11:32:59 PST 2018]; root of context hierarchy
+2018-02-23 11:33:08.442  INFO 5500 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ webwolf ---
+[INFO] Building jar: C:\src\WebGoat\WebGoat\webwolf\target\webwolf-8.0.0.M3.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.5.9.RELEASE:repackage (default) @ webwolf ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ webwolf ---
+[INFO] Installing C:\src\WebGoat\WebGoat\webwolf\target\webwolf-8.0.0.M3.jar to C:\Users\Paul\.m2\repository\org\owasp\webgoat\webwolf\8.0.0.M3\webwolf-8.0.0.M3.jar
+[INFO] Installing C:\src\WebGoat\WebGoat\webwolf\pom.xml to C:\Users\Paul\.m2\repository\org\owasp\webgoat\webwolf\8.0.0.M3\webwolf-8.0.0.M3.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] WebGoat Parent Pom ................................. SUCCESS [  0.640 s]
+[INFO] webgoat-container .................................. SUCCESS [ 52.185 s]
+[INFO] webgoat-plugins-parent ............................. SUCCESS [  1.149 s]
+[INFO] bypass-restrictions ................................ SUCCESS [ 36.787 s]
+[INFO] challenge .......................................... SUCCESS [ 14.741 s]
+[INFO] client-side-filtering .............................. SUCCESS [  1.508 s]
+[INFO] cross-site-scripting ............................... SUCCESS [ 16.858 s]
+[INFO] html-tampering ..................................... SUCCESS [  1.709 s]
+[INFO] http-basics ........................................ SUCCESS [  1.584 s]
+[INFO] http-proxies ....................................... SUCCESS [  7.829 s]
+[INFO] insecure-login ..................................... SUCCESS [  1.402 s]
+[INFO] jwt ................................................ SUCCESS [  1.057 s]
+[INFO] sql-injection ...................................... SUCCESS [ 47.083 s]
+[INFO] xxe ................................................ SUCCESS [ 37.814 s]
+[INFO] idor ............................................... SUCCESS [  2.061 s]
+[INFO] vulnerable-components .............................. SUCCESS [  5.750 s]
+[INFO] webgoat-introduction ............................... SUCCESS [  0.895 s]
+[INFO] webwolf-introduction ............................... SUCCESS [  1.386 s]
+[INFO] auth-bypass ........................................ SUCCESS [  1.269 s]
+[INFO] missing-function-ac ................................ SUCCESS [  7.545 s]
+[INFO] csrf ............................................... SUCCESS [ 38.993 s]
+[INFO] webgoat-server ..................................... SUCCESS [  3.774 s]
+[INFO] webwolf ............................................ SUCCESS [ 25.804 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 05:11 min
+[INFO] Finished at: 2018-02-23T11:33:09-08:00
+[INFO] Final Memory: 152M/852M
+[INFO] ------------------------------------------------------------------------
