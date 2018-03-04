@@ -161,7 +161,7 @@ define(['jquery',
         },
 
         renderOutput: function(output) {
-            var s = this.removeSlashesFromJSON(feedback);
+            var s = this.removeSlashesFromJSON(output);
             this.$curOutput.html(polyglot.t(s) || "");
             this.$curOutput.show(400)
         },

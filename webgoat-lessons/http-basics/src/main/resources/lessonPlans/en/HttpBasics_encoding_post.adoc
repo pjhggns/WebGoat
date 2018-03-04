@@ -1,8 +1,8 @@
 
-== HTTP PUT
+== HTTP POST
 Look in the proxy to examine the http request.
 You will see the  string you entered, as a query parameter
-to the PUT request.
+to the POST request.
 But there may be some differences, for example spaces are replaced
 by plus symbols. This is called url-form-encoded format.
 Sometimes this is imprecisely called "url encoded".

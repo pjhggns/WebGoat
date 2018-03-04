@@ -1,0 +1,13 @@
+== HTTP encoding
+These were examples of GET and POST.
+- GET has parameters in the header, so it can be bookmarked.
+These are the simplest commands, they were the first (and only)
+messages in the initial version of HTTP. Should be used for
+idempotent operations.
+- POST has parameters in the body. Used to change data on the
+server model.
+
+The body of an html message can have various formats.
+Base-64 and HTML are the most common.
+
+Lets peek into a message with these formats...

@@ -56,132 +56,74 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
     public
     @ResponseBody
     AttackResult completed(@RequestParam String raw_string) throws IOException {
-        String raw_input_string = raw_string;
-        if (raw_input_string.isEmpty()) {
+        // purpose is to show how the raw string input gets encoded into UTF-8
+        //this underlies the other encoding, so demo it first
+        if (raw_string.isEmpty()) {
             return trackProgress(failed()
                     .feedback("http-basics.empty")
                     .feedbackArgs("empty string")
                     .build());
         }
-        StringBuilder bld = new StringBuilder();
-        for (int i=0; i<raw_input_string.length(); ++i) {
-            bld.append(ENCSP);
-            bld.append( raw_input_string.charAt(i));
-            bld.append(ENCSP);
-        }
 
+        // example
+        // raw in     = "<1>"
+        // rawF       = "<  1  >"
+        // enc        = "3C 31 3E"
+        // outputO    = 3C313E"
 
-        bld = new StringBuilder();
-        for (int i=0; i<raw_input_string.length(); ++i) {
-            bld.append(ENCSP);
-            bld.append( raw_input_string.charAt(i));
-            bld.append(ENCSP);
-        }
+        String rawIn       = raw_string;
 
-        String str_1 = bld.toString();
-        String htmlEscInputString = HtmlUtils.htmlEscape(bld.toString());
-        String htmlEscInputString_1 = HtmlUtils.htmlEscape(str_1);
+        StringBuilder rawF_SB     = new StringBuilder();
+        StringBuilder enc_SB      = new StringBuilder();
+        StringBuilder outputO_SB  = new StringBuilder();
 
-        String str_2 = "" + raw_input_string.charAt(0);
-        String htmlEscInputString_2 = HtmlUtils.htmlEscape(str_2);
+        for (int i=0; i<rawIn.length(); ++i) {
+            String currChar = rawIn.substring(i, i+1);
+            String htmlEscCurrentChar = HtmlUtils.htmlEscape(currChar);
+            rawF_SB.append(htmlEscCurrentChar);
 
-        String htmlEscInputString_3 = HtmlUtils.htmlEscape(bld.toString());
+            byte[] currCharEnc = currChar.getBytes("UTF-8");
+            for(int j=0; j<currCharEnc.length; ++j) {
 
-        byte[] raw_input_bytes = raw_input_string.getBytes();
-        String hex_encoded_input_string = DatatypeConverter.printHexBinary(raw_input_bytes);
-        String url_form_encoded_input = URLEncoder.encode(raw_input_string, "UTF-8");
-
-        StringBuilder bld1 = new StringBuilder();
-        StringBuilder bld2 = new StringBuilder();
-        StringBuilder bld3 = new StringBuilder(); // copy of raw_input_string
-        StringBuilder bld4 = new StringBuilder(); // copy of HtmlUtils.htmlEscape(raw_inoput_string)
-        for (int i=0; i<raw_input_string.length(); ++i) {
-            String currentChar = "" + raw_input_string.charAt(i);
-            String htmlEscCurrentChar = HtmlUtils.htmlEscape(currentChar);
-            bld1.append(htmlEscCurrentChar);
-
-            bld3.append(raw_input_string.charAt(i));
-            bld4.append(htmlEscCurrentChar);
-
-            byte[] charBytes = currentChar.getBytes();
-            String charBytesStr = DatatypeConverter.printHexBinary(charBytes);
-            bld2.append(charBytesStr);
-
-            int nPad = charBytesStr.length();
-            while(0 < --nPad)
-                bld1.append(ENCSP);
-
-            bld1.append(ENCSP);
-            bld2.append(ENCSP);
-        }
-        String new_formatted_input_string = bld1.toString();
-        String new_hex_formatted_input_string = bld2.toString();
-
-        String copy_1 = bld3.toString(); // copy of raw_input_string
-        String copy_2 = bld4.toString(); // copy of HtmlUtils.htmlEscape(raw_input_string)
-        String copy_3 = HtmlUtils.htmlEscape(raw_input_string) ;
-
-
-        bld = new StringBuilder();
-        for (int i=0; i<hex_encoded_input_string.length(); i=i+2) {
-            bld.append( hex_encoded_input_string.substring(i,i+2));
-            bld.append(ENCSP);
-        }
-        String hex_formatted_input_string = bld.toString();
-
-        bld = new StringBuilder();
-        for (int i=0; i<url_form_encoded_input.length(); ++i) {
-            if (url_form_encoded_input.charAt(i) == '%') {
-                bld.append(url_form_encoded_input.substring(i, i + 3));
-                i = i + 2;
-            } else {
-                bld.append(ENCSP);
-                bld.append(url_form_encoded_input.charAt(i));
-                bld.append(ENCSP);
+                String str = String.format("%02x", currCharEnc[j]);
+                enc_SB.append(str);
+                enc_SB.append(ENCSP);
+                rawF_SB.append(ENCSP);
+                rawF_SB.append(ENCSP);
+                outputO_SB.append(str);
             }
         }
-        String url_form_formatted_input_string = bld.toString();
+        String rawF = rawF_SB.toString();
+        String enc = enc_SB.toString();
+        String outputO = outputO_SB.toString();
+
 
         String feedbackArgs = "<br><div><br>" // HtmlUtils.htmlEscape(raw_input_string)
                 + "<br>" + "<table border=1 style=font-family:monospace>"
                 + "<tr>"
-                + "<th>" + "Your input" // + "</th>"
-                + "<td>" + HtmlUtils.htmlEscape(raw_input_string) // + "</td>"
-                    // + "</tr>"
+                + "<th>" + "Your input" + "</th>"
+                + "<td>" + HtmlUtils.htmlEscape(rawIn) + "</td>"
+                + "</tr>"
                 + "<tr>"
-                + "<th>" + "your input (spaces added for alignment)" // + "</th>"
-                + "<td>" + new_formatted_input_string// + "</td>"
-                // + "</tr>"
+                + "<th>" + "split up into chars" + "</th>"
+                + "<td>" + rawF + "</td>"
+                + "</tr>"
                 + "<tr>"
-                + "<th>" + "hex input (spaces added for alignment)" // + "</th>"
-                + "<td>" + new_hex_formatted_input_string // + "</td>"
-                // + "</tr>"
+                + "<th>" + "UTF-8 hex " + "</th>"
+                + "<td>" + enc + "</td>"
+                + "</tr>"
                 + "<tr>"
-                + "<th>" + "byte stream, formatted" // + "</th>"
-                + "<td>" + hex_formatted_input_string // + "</td>"
-                + "<tr>"
-                + "<th>" + "UTF-8 byte stream in hex " // + "</th>"
-                + "<td>" + hex_encoded_input_string // + "</td>"
-/*                + "<tr>"
-                    + "<th>" + "url-form-encoded" // + "</th>"
-                    + "<td>" + url_form_encoded_input // + "</td>"
-                    // + "</tr>"
-                    + "<tr>"
-                    + "<th>" + "url-form formatted" // + "</th>"
-                    + "<td>" + url_form_formatted_input_string // + "</td>"
-                    // + "</tr>"
-                    + "<tr>"
-                    + "<th>" + "html escaped" // + "</th>"
-                    + "<td>" + HtmlUtils.htmlEscape(htmlEscInputString) // + "</td>"
-                // + "</table>"
-                */
+                + "<th>" + "byte stream" + "</th>"
+                + "<td>" + outputO + "</td>"
+                + "</tr>"
+                + "/table> "
                 ;
 
             return trackProgress(success()
                     .feedback("http-basics.reversed")
                     .feedbackArgs(feedbackArgs)
                     .output("http-basics.lesson.success.output")
-                    .outputArgs("", hex_encoded_input_string, url_form_encoded_input)
+                    .outputArgs("", "", "")
                 .build());
     }
 
@@ -189,45 +131,113 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
     public
     @ResponseBody
     AttackResult completed_put(@RequestParam String person) throws IOException {
-        if (person.toString().equals("")) {
-            return trackProgress(failed().feedback("http-basics.empty").build());
+
+        // purpose is to show how the raw string input gets encoded into url-form-encoded
+        // URLEncoder.encode() implements url-form-encode,
+        // this code explains that algorithm, together with UTF-8
+
+        String rawInputString = person;
+        String new_formatted_input_string = "new_formatted_inout_string";
+
+
+        // the input string, as entered, formatted for display in html
+        String htmlEscInputString = HtmlUtils.htmlEscape(rawInputString);
+
+        // content-type = url-form-encoded
+        String url_form_encoded_input = URLEncoder.encode(rawInputString, "UTF-8");
+
+        // encode the input string, character at a time,
+        // and produce the intermediate calculations for display
+        // example:
+        // raw input  = "<1>"
+        // raw enc    = "%3C1%3E"
+        // rawEncF    = "<   1 >"
+        // enc        = "%3C 1 %CE"
+        // encCh      = "%3C 1 %3E"
+        // encChars   = "% 3 C 1 % 3 E"
+        // encCharsF  = "<        1 >      "
+        // encCharsFF = "%  3  C  1 %  3  E"
+        // encCharsO  = "?? 33 43 31 ?? 31 45"
+        // outputO    = "??334331??3145"
+        StringBuilder rawEnc_SB = new StringBuilder();
+        StringBuilder rawEncF_SB = new StringBuilder();
+        StringBuilder enc_SB = new StringBuilder();
+        StringBuilder encCh_SB = new StringBuilder();
+        StringBuilder encCharsFF_SB = new StringBuilder();
+        StringBuilder encCharsO_SB= new StringBuilder();
+        StringBuilder outputO_SB = new StringBuilder();
+        for (int i=0; i<rawInputString.length(); ++i) {
+            String currChar = rawInputString.substring(i, i + 1);
+            String currCharEnc = URLEncoder.encode(currChar, "UTF-8");
+            enc_SB.append(currCharEnc);
+            enc_SB.append(ENCSP);
+            int len = currCharEnc.length();
+            for (int j = 0; j < len; ++j) {
+                String str = currCharEnc.substring(j, j + 1);
+                encCharsFF_SB.append(str);
+                encCharsFF_SB.append(ENCSP);
+                encCharsFF_SB.append(ENCSP);
+                byte xx = (byte) currCharEnc.charAt(j);
+                String sxx = String.format("%02x", xx);
+                encCharsO_SB.append(sxx);
+                encCharsO_SB.append(ENCSP);
+                outputO_SB.append(sxx);
+            }
+            rawEncF_SB.append(HtmlUtils.htmlEscape(currChar));
+            rawEncF_SB.append(ENCSP);
+            len = currCharEnc.length();
+            while (0 < --len) {
+                rawEncF_SB.append(ENCSP);
+            }
         }
 
-        String raw_input_string = "raw input";
-        String new_formatted_input_string = "new_formatted_inout_string";
-        String url_form_encoded_input = "url_form_encoded_input";
-        String htmlEscInputString = "htmlEscInputString";
-        String url_form_formatted_input_string = "url_form_formatted_input_string";
+        String enc = enc_SB.toString();
+        String rawEncF = rawEncF_SB.toString();
+        String encCharsFF = encCharsFF_SB.toString();
+        String encCharsO = encCharsO_SB.toString();
+        String outO = outputO_SB.toString();
 
         String feedbackArgs = "<br><div><br>" // HtmlUtils.htmlEscape(raw_input_string)
                 + "<br>" + "<table border=1 style=font-family:monospace>"
                 + "<tr>"
-                + "<th>" + "Your input" // + "</th>"
-                + "<td>" + HtmlUtils.htmlEscape(raw_input_string) // + "</td>"
-                // + "</tr>"
+                + "<th>" + "Your input" + "</th>"
+                + "<td>" + HtmlUtils.htmlEscape(rawInputString) + "</td>"
+                + "</tr>"
                 + "<tr>"
-                + "<th>" + "your input (spaces added for alignment)" // + "</th>"
-                + "<td>" + new_formatted_input_string// + "</td>"
+                + "<th>" + "is split into chars" + "</th>"
+                + "<td>" + rawEncF + "</td>"
+                + "</tr>"
                 + "<tr>"
-                    + "<th>" + "url-form-encoded" // + "</th>"
-                    + "<td>" + url_form_encoded_input // + "</td>"
-                    // + "</tr>"
-                    + "<tr>"
-                    + "<th>" + "url-form formatted" // + "</th>"
-                    + "<td>" + url_form_formatted_input_string // + "</td>"
-                    // + "</tr>"
-                    + "<tr>"
-                    + "<th>" + "html escaped" // + "</th>"
-                    + "<td>" + HtmlUtils.htmlEscape(htmlEscInputString) // + "</td>"
-                // + "</table>"
+                + "<th>" + "ans each char is url-form-encoded"  + "</th>"
+                + "<td>" + enc + "</td>"
+                + "</tr>"
+                + "<tr>"
+                + "<th>" + "encoded string is split into chars"  + "</th>"
+                + "<td>" + url_form_encoded_input  + "</td>"
+                + "</tr>"
+                + "<tr>"
+                + "<th>" + "url_form_encoded_bytes " + "</th>"
+                + "<td>" + encCharsFF + "</td>"
+                + "</tr>"
+                + "<tr>"
+                + "<th>" + "encCharsO" + "</th>"
+                + "<td>" + encCharsO + "</td>"
+                + "</tr>"
+                + "<tr>"
+                + "<th>" + "output_bytes " + "</th>"
+                + "<td>" + outO + "</td>"
+                + "</tr>"
+                + "</table>"
+                + "<br>"
+                + "input was " + rawInputString.length() + " display characters "
+                + rawInputString.length() + " bytes in memory "
+                + url_form_encoded_input .length() + " bytes to send in http"
                 ;
-
-        String hex_encoded_input_string = "hex_encoded_input_string";
         return trackProgress(success()
                 .feedback("http-basics.reversed")
                 .feedbackArgs(feedbackArgs)
                 .output("http-basics.lesson.success.output")
-                .outputArgs("", hex_encoded_input_string, url_form_encoded_input)
+                .outputArgs("After trying a few strings, go to the next page" )
                 .build());
 
     }
