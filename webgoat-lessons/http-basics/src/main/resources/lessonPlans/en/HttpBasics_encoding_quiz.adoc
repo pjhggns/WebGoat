@@ -1,0 +1,3 @@
+== HTTP SUMMARY
+
+We looked at HTTP and various types of encoding.

@@ -1,0 +1,18 @@
+
+== HTTP ENCODING MULTIPART
+There are how many encoding methods used for HTTP requests,
+such as jpeg, bmp, etc. You may encounter or manipulate
+many of these in the context of security.
+
+So far, the HTTP requests have included only single part
+forms, that were all encoded using url-for-encoding.
+Another method is to send multipart forms, which allow
+a mixture of encodings in the request.
+
+Also, we will see a couple of new encodings. One of the more
+common encodings foun is Base64, allwoing binary data.
+Another format is UTF-16.
+
+Enter some numbers into the form below, and the Base64
+will be calculated.
+

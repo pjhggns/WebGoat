@@ -1,0 +1,15 @@
+
+== HTTP RESPONSES
+For every request, theres a response. The response has a
+status code  indicating success or other result,
+other various headers, and optional body.
+The response may have
+data associated, andit will be encoded.
+Look in the proxy to examine the http response.
+
+Responses are of the form....
+
+And they use use encoding such as JSON
+ or html. need a page for both.
+
+

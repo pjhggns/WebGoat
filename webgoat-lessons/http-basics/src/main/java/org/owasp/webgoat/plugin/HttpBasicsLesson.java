@@ -56,8 +56,6 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
     public
     @ResponseBody
     AttackResult completed(@RequestParam String raw_string) throws IOException {
-        // purpose is to show how the raw string input gets encoded into UTF-8
-        //this underlies the other encoding, so demo it first
         if (raw_string.isEmpty()) {
             return trackProgress(failed()
                     .feedback("http-basics.empty")
@@ -65,14 +63,14 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
                     .build());
         }
 
-        // example
+        // purpose is to show how the raw string input gets encoded into UTF-8
+        // example, user input "<1>  build the following strings
         // raw in     = "<1>"
         // rawF       = "<  1  >"
         // enc        = "3C 31 3E"
         // outputO    = 3C313E"
 
         String rawIn       = raw_string;
-
         StringBuilder rawF_SB     = new StringBuilder();
         StringBuilder enc_SB      = new StringBuilder();
         StringBuilder outputO_SB  = new StringBuilder();
@@ -80,25 +78,26 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
         for (int i=0; i<rawIn.length(); ++i) {
             String currChar = rawIn.substring(i, i+1);
             String htmlEscCurrentChar = HtmlUtils.htmlEscape(currChar);
-            rawF_SB.append(htmlEscCurrentChar);
+            rawF_SB.append(htmlEscCurrentChar); // always esc when displaying raw input
 
-            byte[] currCharEnc = currChar.getBytes("UTF-8");
-            for(int j=0; j<currCharEnc.length; ++j) {
-
-                String str = String.format("%02x", currCharEnc[j]);
+            // the character representation may be more than one byte
+            byte[] currCharEncSeq = currChar.getBytes("UTF-8");
+            for(byte b : currCharEncSeq) {
+                String str = String.format("%02x", b);
                 enc_SB.append(str);
-                enc_SB.append(ENCSP);
-                rawF_SB.append(ENCSP);
-                rawF_SB.append(ENCSP);
                 outputO_SB.append(str);
+            }
+            // each byte gets three chars output, two hex and one sp
+            // index starts at 1, already one chara output
+            for(int j=1; j< (3*currCharEncSeq.length); ++j) {
+                rawF_SB.append(ENCSP);
             }
         }
         String rawF = rawF_SB.toString();
         String enc = enc_SB.toString();
         String outputO = outputO_SB.toString();
 
-
-        String feedbackArgs = "<br><div><br>" // HtmlUtils.htmlEscape(raw_input_string)
+        String feedbackArgs = "<br>"
                 + "<br>" + "<table border=1 style=font-family:monospace>"
                 + "<tr>"
                 + "<th>" + "Your input" + "</th>"
@@ -116,11 +115,11 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
                 + "<th>" + "byte stream" + "</th>"
                 + "<td>" + outputO + "</td>"
                 + "</tr>"
-                + "/table> "
-                ;
+                + "</table> ";
+             //   ;
 
             return trackProgress(success()
-                    .feedback("http-basics.reversed")
+                    .feedback("http-basics.encoding.get.feedback")
                     .feedbackArgs(feedbackArgs)
                     .output("http-basics.lesson.success.output")
                     .outputArgs("", "", "")
@@ -130,15 +129,12 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
     @RequestMapping(method = RequestMethod.PUT)
     public
     @ResponseBody
-    AttackResult completed_put(@RequestParam String person) throws IOException {
+    AttackResult completed_put(@RequestParam String raw_string) throws IOException {
 
         // purpose is to show how the raw string input gets encoded into url-form-encoded
         // URLEncoder.encode() implements url-form-encode,
         // this code explains that algorithm, together with UTF-8
-
-        String rawInputString = person;
-        String new_formatted_input_string = "new_formatted_inout_string";
-
+        String rawInputString = raw_string;
 
         // the input string, as entered, formatted for display in html
         String htmlEscInputString = HtmlUtils.htmlEscape(rawInputString);
@@ -234,7 +230,7 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
                 + url_form_encoded_input .length() + " bytes to send in http"
                 ;
         return trackProgress(success()
-                .feedback("http-basics.reversed")
+                .feedback("http-basics.encoding.post.feedback")
                 .feedbackArgs(feedbackArgs)
                 .output("http-basics.lesson.success.output")
                 .outputArgs("After trying a few strings, go to the next page" )

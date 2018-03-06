@@ -1,4 +1,35 @@
-== The Quiz
+= HTTP GET
 
-What type of HTTP command did WebGoat use for this lesson.  A POST or a GET.
+"Get" requests are the simplest. Client sends a query
+to the server, which sends an answer.
+Originally the
+endpoints were files or parts of files, like pages or chapters,
+and the browser displayed the contents.
+For that reason the host in the URL has a format like a file
+directory path.
+
+This lesson looks at the request-response for a simple
+operation and uses the character encoding for UTF-8, which
+is the standard for most of the traffic on the web.
+
+Enter a string and
+press "Go" to submit a request.
+The server will accept the request, and
+respond with some encoding of the string.
+This Lesson illustrates the use of HTTP Get/Response,
+and the basics of UTF-8 character encoding.
+
+1. Type in some regular keyboard characters, like "abc",
+notice each character takes one hex byte in UTF-8.
+2. How are spaces represented" For example "ab 12".
+Try some other interesting characters, ?\+<%
+3. The most common characters, only one byte is needed.
+But for less common characters, like &copy; multiple bytes are used
+Enter a string with that character (you can copy&paste
+from this text) and observe. How many bytes does it take to
+represent &copy;&copy;
+4. Capture the request in proxy and find your input string.
+Compare to the input string. Note spaces. Go to the next page
+to see more about this format.
+
 

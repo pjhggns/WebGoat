@@ -13,12 +13,13 @@ so it is also called per-cent-encoding.
 In addition to spaces, url encoding also replaces
 some other characters, for example, some special sequences
 are:
-- 1
-- 2
 
-Look at the HTTTPmrequest and note the format of a PUT
+* <bold>
+* &copy;
+
+Look at the HTTTPmrequest and note the format of a POST
 request. Note the headers for content-type and for
-content-lenght. There is no content-length header in a get,
+content-length. There is no content-length header in a get request,
 because there is no body content.
 
 
