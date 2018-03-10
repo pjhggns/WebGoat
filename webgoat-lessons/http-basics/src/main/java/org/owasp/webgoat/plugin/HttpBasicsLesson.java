@@ -4,6 +4,8 @@ import org.owasp.webgoat.assignments.AssignmentEndpoint;
 import org.owasp.webgoat.assignments.AssignmentHints;
 import org.owasp.webgoat.assignments.AssignmentPath;
 import org.owasp.webgoat.assignments.AttackResult;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -52,6 +54,7 @@ import java.net.URLEncoder;
 public class HttpBasicsLesson extends AssignmentEndpoint {
 
     public static final char ENCSP = '.'; // display spaces/separators in encoded strings
+
     @RequestMapping(method = RequestMethod.GET)
     public
     @ResponseBody
@@ -85,6 +88,7 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
             for(byte b : currCharEncSeq) {
                 String str = String.format("%02x", b);
                 enc_SB.append(str);
+                enc_SB.append(ENCSP);
                 outputO_SB.append(str);
             }
             // each byte gets three chars output, two hex and one sp
@@ -116,7 +120,6 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
                 + "<td>" + outputO + "</td>"
                 + "</tr>"
                 + "</table> ";
-             //   ;
 
             return trackProgress(success()
                     .feedback("http-basics.encoding.get.feedback")
@@ -204,23 +207,23 @@ public class HttpBasicsLesson extends AssignmentEndpoint {
                 + "<td>" + rawEncF + "</td>"
                 + "</tr>"
                 + "<tr>"
-                + "<th>" + "ans each char is url-form-encoded"  + "</th>"
+                + "<th>" + " each char is url-form-encoded"  + "</th>"
                 + "<td>" + enc + "</td>"
                 + "</tr>"
-                + "<tr>"
+         /* ** PJH remove      + "<tr>"
                 + "<th>" + "encoded string is split into chars"  + "</th>"
                 + "<td>" + url_form_encoded_input  + "</td>"
-                + "</tr>"
+                + "</tr>" */
                 + "<tr>"
                 + "<th>" + "url_form_encoded_bytes " + "</th>"
                 + "<td>" + encCharsFF + "</td>"
                 + "</tr>"
                 + "<tr>"
-                + "<th>" + "encCharsO" + "</th>"
+                + "<th>" + "  octet hex values " + "</th>"
                 + "<td>" + encCharsO + "</td>"
                 + "</tr>"
                 + "<tr>"
-                + "<th>" + "output_bytes " + "</th>"
+                + "<th>" + "output byte stream" + "</th>"
                 + "<td>" + outO + "</td>"
                 + "</tr>"
                 + "</table>"
