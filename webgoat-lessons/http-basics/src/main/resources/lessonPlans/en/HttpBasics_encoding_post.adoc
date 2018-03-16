@@ -1,5 +1,6 @@
-
-== HTTP POST
+=== HTTP POST
+Requests that will change the state of the application, such as
+updating the user database as implemented with POST.
 Look in the proxy to examine the http request.
 You will see the  string you entered, as a query parameter
 to the POST request.
@@ -17,7 +18,7 @@ are:
 * <bold>
 * &copy;
 
-Look at the HTTTPmrequest and note the format of a POST
+Look at the HTTTP request and note the format of a POST
 request. Note the headers for content-type and for
 content-length. There is no content-length header in a get request,
 because there is no body content.

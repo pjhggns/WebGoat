@@ -1,0 +1,26 @@
+=== Encryption example
+In this example is shown encryption and hashing.
+Enter a message, and the message is sent to the
+server in plaintext, ??? encrypted, and SHA-256
+hash signature.
+
+Try It!
+Capture the request in proxy and alter the message.
+You will see the altered message when received
+but the encrypted and the hash will not match
+and the code will detect it.
+
+Can you change the hash to match? Not without
+knowing the key (which is in the browser code,
+so not too hard to find it).
+
+This technique can help prevent man in the middle
+type attackes, which also includes attacks on
+stored data. All sensitive data stored on
+the file system should be encrypted.
+
+Enter a string and submit it. The code will
+send the string encrypted and also send a
+salted hash. Try changing the request data,
+and note that the server will detect that it had
+been changed.

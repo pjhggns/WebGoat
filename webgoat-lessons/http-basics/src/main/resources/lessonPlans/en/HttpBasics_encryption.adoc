@@ -1,0 +1,31 @@
+=== Encoding, encryption, hashing, related encoding
+*Encoding* refers to transforming symbols in one domain set into
+another target set range. Generally it used to denote
+particular transfer encodings. Usually with an inverse
+decoding and may or may not be loss-less, and may even
+add extra characters.
+
+*Encryption* applies mathematical functions (cipher) to the binary
+source so that only the intended recipient can
+decode the function, for security. Relies on some
+shared secret. There is more detail on this topic
+in the Security at Rest, Security in Transfer lesson.  [where]
+
+*Hashing* is a technique for integrity, that calculates
+a key value from the data stream in a way that is unique
+for the data stream so that any change to the data stream
+will make the signature mismatch, and which is
+infeasible to recalculate to spoof the signature.
+
+Thhis is a very rich topic. Here are some terms to know,
+
+* AES - advanced encryption standard
+* DES - an encryption standard
+* SHA - secure hashing algorithm
+* PKE Public Key Encryption, the receiver can offer a key publicly
+so that anyone can encrypt but only receiver can decrypt.
+Most widely used, SSL.
+* SSL - Secure Socket Layer provides strong end-to-end security.
+All connections should be SSL, and are transitioning.
+* WEP - wireless encryption protocol
+* MD5, other insecure techniques, open to brute force hacking

@@ -1,0 +1,32 @@
+=== HTTP ENCODING BASE 64
+Binary data is encoded for http transfer using
+various schemes, the most common is base 64.
+It's used for files, gifs, and
+all sorts of data sources. It can be used to deliver
+executable payloads or exfiltrate files.
+
+Base-64 will represent binary data strings in 7-bit ascii,
+displayable text.
+Its advantage over hex encoding is that it requires
+about 4/3 the number of octal bytes, whaeras hex requires
+2 bytes for each binary octet source.
+
+The Base64 space savings is accomplished by splitting each
+3 byte (24 bit) sequence into 4 sequences of 6 bytes
+and encoding each into a printable
+character in the set A-Za-z0-9+/. The encoded string
+is usually padded to make the length mod 3.
+
+Usually if you need to encode/decode Base64 there
+are many utilities. It's good to have a basic
+understanding of the encoding since so many similar schemes are used.
+For an in-depth explanation you should refer to
+outside source.
+
+Here we present the calculation
+for a hex stream. Note that if you refer to many
+examples they present encoded text, but binary source bytes
+are more common. If you want to recreate an example
+of text base64 encoded, start with an hex
+byte stream. You can use the page from lesson 1.
+

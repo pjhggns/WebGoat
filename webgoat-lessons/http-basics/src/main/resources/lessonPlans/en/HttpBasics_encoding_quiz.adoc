@@ -1,3 +1,11 @@
-== HTTP SUMMARY
+=== HTTP SUMMARY
 
-We looked at HTTP and various types of encoding.
+HTTP QUIZ
+
+We looked at HTTP get and post requests and encoding.
+This assignment is to performa a small man-in-the-middle
+attack, and change a request using the proxy.
+Set a breakpoint in your proxy,
+Enter a string below, and submit it.
+Change the request from a GET to a POST.
+

@@ -1,11 +1,29 @@
+=== HTTP ENCODING  AND MULTIPART REQUESTS
 
-== HTTP ENCODING MULTIPART
+The recommennded character encoding for web applications
+is UTF-8 but there are many other encodings around.
+Character encodings are mostly used to represent a
+large language character set within 7 or 8 bit boundaries
+for better hardware compatibility.
+
+
+* ASCII - 7 bit limited character set. Even more limited
+is the displayable subset.
+* UTF-8 uses one byte to represent most common characters
+including the ASCII set, and uses multi-byte sequences for
+less common.
+* UTF-16 uses 2 bytes for the most common characters and
+ multi-byte sequences for less common. Prevalent
+in most programming languages, almost always
+less efficient than UTF-8.
+
+
 There are how many encoding methods used for HTTP requests,
 such as jpeg, bmp, etc. You may encounter or manipulate
 many of these in the context of security.
 
-So far, the HTTP requests have included only single part
-forms, that were all encoded using url-for-encoding.
+The previous HTTP requests have included only single part
+forms, that were all encoded using url-form-encoding.
 Another method is to send multipart forms, which allow
 a mixture of encodings in the request.
 

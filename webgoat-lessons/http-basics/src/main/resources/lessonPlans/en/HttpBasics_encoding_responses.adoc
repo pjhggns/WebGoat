@@ -1,5 +1,5 @@
 
-== HTTP RESPONSES
+=== HTTP RESPONSES
 For every request, theres a response. The response has a
 status code  indicating success or other result,
 other various headers, and optional body.
