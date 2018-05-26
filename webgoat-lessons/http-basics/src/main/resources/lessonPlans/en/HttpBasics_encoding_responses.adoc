@@ -1,15 +1,31 @@
-
-=== HTTP RESPONSES
-For every request, theres a response. The response has a
+=== HTTP RESPONSES AND ESCAPE SEQUENCES
+For every request, theres a response. The response,  has a
 status code  indicating success or other result,
-other various headers, and optional body.
+other various headers similar to the request,
+and a [optional] body.
 The response may have
-data associated, andit will be encoded.
+data associated, and it will be encoded.
+
 Look in the proxy to examine the http response.
+Some web apps
+may not make the data visible,
+especially if the app is not browser based
+so the only way to get insight is examine the messages.
 
-Responses are of the form....
+Response headers are used to provide security against a number
+of potential vulnerabilities, these are discussed in later
+sections such as XSS.
 
-And they use use encoding such as JSON
- or html. need a page for both.
+The most common response formats are html, json, and xml.
+Each of these encodings that use escape sequences to
+disambiguate the data stream. Previously you saw encodings
+at the lower level of formats,
+
+ * Escape sequences are used to send data with a protocol that
+ have inherent meaning in the protocol and must be disambiguated.
+
+Enter some html in the following control to see how it gets
+ escaped. You will see many vulnerabilities related to this
+ mechanism, as will be explored in depth in following lessons
 
 

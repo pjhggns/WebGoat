@@ -1,11 +1,19 @@
-=== HTTP SUMMARY
-
-HTTP QUIZ
+=== MAN-IN-THE-MIDDLE ATTACK
 
 We looked at HTTP get and post requests and encoding.
-This assignment is to performa a small man-in-the-middle
+This assignment is to perform a small man-in-the-middle
 attack, and change a request using the proxy.
+
+This is an extreme example of an intruder gaining access
+to communications. It could happen, for example,
+using a malicious counterfeit wireless "free" public-access
+hub. But even in a browser-server environment there are
+many agents between the user and the server.
+
 Set a breakpoint in your proxy,
 Enter a string below, and submit it.
+Your string must include some UTF-8 multibyte sequences
+or other escaped characters (spaces, punctuation).
+
 Change the request from a GET to a POST.
 

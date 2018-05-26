@@ -1,9 +1,9 @@
 === Wrap up
-Wehave looked at the basics of the most common
+We have looked at the basics of the most common
 encoding techniques and how to observe http
 requests and responses.
 
 You will see examples of vulnerabilities and
  exploits related to encoding and encryption. Also
  there are more browser related lessons especially
- involving hppt in the later sections. [where]
+ involving html in the later sections. [where]

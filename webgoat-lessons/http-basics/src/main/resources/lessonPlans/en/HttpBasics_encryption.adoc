@@ -17,8 +17,11 @@ for the data stream so that any change to the data stream
 will make the signature mismatch, and which is
 infeasible to recalculate to spoof the signature.
 
-Thhis is a very rich topic. Here are some terms to know,
+This is a very rich topic. Here are some terms to know,
+and they will be used in later lessons.
 
+* Authentication - methods to validate the true source/dest of information
+*
 * AES - advanced encryption standard
 * DES - an encryption standard
 * SHA - secure hashing algorithm

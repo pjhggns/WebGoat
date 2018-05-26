@@ -1,5 +1,5 @@
 
-== HTTP GET
+== HTTP GET AND UTF-8 CHARACTER ENCODING
 
 Enter a string, such as your name
 the input field below and

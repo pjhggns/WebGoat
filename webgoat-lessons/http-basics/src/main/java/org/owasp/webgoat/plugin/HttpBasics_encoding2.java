@@ -23,7 +23,7 @@ import java.net.URLEncoder;
  * *************************************************************************************************
  */
 
-@AssignmentPath("/HttpBasics/encoding")
+@AssignmentPath("/HttpBasics")
 @AssignmentHints({"http-basics.hints.http_basics_lesson.1"})
 public class HttpBasics_encoding2 extends AssignmentEndpoint {
 
@@ -35,7 +35,7 @@ public class HttpBasics_encoding2 extends AssignmentEndpoint {
     public static final char ENCSP = '.'; // display spaces/separators in encoded strings
 
 
-    @RequestMapping(value="/utf8", method = RequestMethod.GET)
+    @RequestMapping(value="/encoding/utf8", method = RequestMethod.GET)
     public
     @ResponseBody
     AttackResult handlerUTF8Get(@RequestParam String input_string) throws IOException {
@@ -100,7 +100,7 @@ public class HttpBasics_encoding2 extends AssignmentEndpoint {
                 .build());
     }
 
-    @RequestMapping(value="/utf8", method = RequestMethod.PUT)
+    @RequestMapping(value="/encoding/utf8", method = RequestMethod.PUT)
     public
     @ResponseBody
     AttackResult handlerUTF8Put(@RequestParam String input_string) throws IOException {
@@ -192,7 +192,7 @@ public class HttpBasics_encoding2 extends AssignmentEndpoint {
     static final String lookup = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+/";
 
 
-    @RequestMapping(value="/base64", method = RequestMethod.POST)
+    @RequestMapping(value="/encoding/base64", method = RequestMethod.POST)
     public
     @ResponseBody
     AttackResult handlerBase64Post(@RequestParam String input_string) throws IOException {
@@ -305,10 +305,44 @@ public class HttpBasics_encoding2 extends AssignmentEndpoint {
                 .build());
     }
 
-    @RequestMapping(value="/base64", method = RequestMethod.GET)
+    @RequestMapping(value="/encoding/base64", method = RequestMethod.GET)
     public
     @ResponseBody
     AttackResult handlerBase64Get(@RequestParam String input_string) throws IOException {
+
+        String feedbackArgs = "display the input string in base64";
+        return trackProgress(success()
+                .feedback("http-basics.encoding.post.feedback")
+                .feedbackArgs(feedbackArgs)
+                .output("http-basics.lesson.success.output")
+                .outputArgs("After trying a few strings, go to the next page" )
+                .build());
+
+    }
+
+
+
+    @RequestMapping(value="/encryption/example", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    AttackResult handlerEncryptionMitm(@RequestParam String input_string) throws IOException {
+
+        String feedbackArgs = "display the input string in base64";
+        return trackProgress(success()
+                .feedback("http-basics.encoding.post.feedback")
+                .feedbackArgs(feedbackArgs)
+                .output("http-basics.lesson.success.output")
+                .outputArgs("After trying a few strings, go to the next page" )
+                .build());
+
+    }
+
+
+
+    @RequestMapping(value="/encryption/mitm2", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    AttackResult handlerEncryptionMitm2(@RequestParam String input_string) throws IOException {
 
         String feedbackArgs = "display the input string in base64";
         return trackProgress(success()

@@ -1,0 +1,21 @@
+=== Encryption and Man in the Middle
+
+Revisiting the Man-in-the-middle attack, encryption
+and hashing can help.
+
+Enter your sensitive string and it will be sent
+as plain text and and encrypted text, and with
+a hash on the plain text to provide message integrity.
+ Of course a real application would never send the
+ plain text and the encrypted text.
+
+Now if you change the fields the software will
+ detect it. This approach is similar to older secure
+ connection techniques, but by itself it does not provide very
+ good security for a number of reasons and should only be used
+ in conjunction with SSL.
+
+ Note that the code is using a "nonce" as a hash.
+
+ Try it. Enter a string and try to change any of the
+ data that is sent.
